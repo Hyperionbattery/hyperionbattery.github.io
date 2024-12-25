@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hyperion</title>
+    <!-- Link the Monda font -->
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .company-name {
+            font-family: 'Monda', cursive; /* Apply Monda font */
+            font-size: 5.0rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .company-name .first-word {
+            color: black; /* White */
+        }
+
+        .company-name .second-word {
+            color: #f7c600; /* Yellow */
+        }
+
+        .headline {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .subheadline {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: black;
+        }
+
+        .email-input-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .email-input {
+            padding: 15px;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            padding: 15px 30px;
+            font-size: 1rem;
+            background-color: #f7c600;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #f7c600;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: black;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #f7c600;
+        }
+
+        /* Photo Section */
+        .photos-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .photos img {
+            width: 100%; /* Make the image responsive to the container */
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                width: 90%;
+            }
+
+            .company-name {
+                font-size: 3rem; /* Smaller font size for mobile */
+            }
+
+            .headline {
+                font-size: 1.5rem;
+            }
+
+            .subheadline {
+                font-size: 1rem;
+            }
+
+            .email-input-container {
+                flex-direction: column; /* Stack input and button */
+                align-items: stretch;
+            }
+
+            .email-input {
+                margin-right: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            .submit-btn {
+                width: 100%; /* Full-width button */
+            }
+
+            .photos img {
+                max-width: 150px; /* Smaller image for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="company-name">
+        <span class="first-word">Hyper</span><span class="second-word">ion</span>
+    </h1>
+    <h2 class="headline">Thank you for your interest in Hyperion's system</h2>
+    <p class="subheadline">Hyperion's battery swapping will allow you to power your home or business and all your light electric 
+        vehicles, tools, and equipment with the same battery packs!</p>
+    <p class="subheadline">Sign up below for updates and get the latest news about Hyperion's development.</p>
+
+    <div class="email-input-container">
+        <input type="email" class="email-input" placeholder="Enter your email" required>
+        <button class="submit-btn">Subscribe</button>
+    </div>
+
+    <footer>
+        <p>By subscribing, you agree to our <a href="#">Privacy Policy</a>.</p>
+    </footer>
+</div>
+
+<div class="photos-container">
+    <div class="photos">
+        <img src="Battery Module.PNG" alt="Battery Module Photo">
+    </div>
+</div>
+
+</body>
+</html>
