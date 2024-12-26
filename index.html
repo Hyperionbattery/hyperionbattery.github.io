@@ -175,9 +175,20 @@
     <p class="subheadline">Sign up below for updates and get the latest news about Hyperion's development.</p>
 
     <div class="email-input-container">
-        <input type="email" class="email-input" placeholder="Enter your email" required>
+        <!-- <input type="email" class="email-input" placeholder="Enter your email" required>
         <button class="submit-btn">Subscribe</button>
-    </div>
+        -->
+        <form action="https://formspree.io/f/xlddgwrd" method="POST">
+            <!-- Honeypot for spam prevention -->
+            <input type="text" name="_honeypot" style="display:none">
+    
+            <!-- Email input -->
+            <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
+    
+            <!-- Submit button -->
+            <button type="submit" class="submit-btn">Subscribe</button>
+        </form>
+   </div>
 
     <footer>
         <p>By subscribing, you agree to our <a href="#">Privacy Policy</a>.</p>
