@@ -240,8 +240,9 @@
    </div>
 
    <footer>
-        <p>By subscribing, you agree to our <a href="#" id="privacyPolicyLink" style="color: #f7c600; text-decoration: underline;">Privacy Policy</a>.</p>
+        <p>By subscribing, you agree to our <a href="javascript:void(0);" id="privacyPolicyLink" style="color: #f7c600; text-decoration: underline;">Privacy Policy</a>.</p>
     </footer>
+
 
 </div>
 
@@ -272,9 +273,11 @@
 
     // When the user clicks the "Privacy Policy" link, open the modal
     privacyLink.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent the default link behavior
+        event.preventDefault(); // Block the default link action
         modal.style.display = "flex"; // Show the modal as a flex container
-    });
+        window.scrollTo(0, 0); // Ensure the page stays at the top
+        });
+
 
     // When the user clicks on the close button, close the modal
     closeBtn.addEventListener("click", () => {
