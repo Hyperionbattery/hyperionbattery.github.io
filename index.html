@@ -110,6 +110,51 @@
             color: #f7c600;
         }
 
+        /* Modal Background Overlay */
+        .modal {
+            display: none; /* Ensure the modal is hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+            z-index: 1000; /* Ensure it overlays other elements */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* Adjust width for responsiveness */
+            max-width: 500px; /* Maximum width for larger screens */
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .modal-content {
+                width: 95%;
+            }
+        }
+
         /* Photo Section */
         .photos-container {
             margin-top: 20px;
@@ -156,53 +201,7 @@
             .submit-btn {
                 width: 100%; /* Full-width button */
             }
-
-        
-            /* Modal Background Overlay */
-            .modal {
-                display: none; /* Hidden by default */
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
-                z-index: 1000; /* Sits on top of other elements */
-                justify-content: center;
-                align-items: center;
-            }
-
-            /* Modal Content */
-            .modal-content {
-                background-color: white;
-                color: black;
-                padding: 20px;
-                border-radius: 10px;
-                width: 90%; /* Adjust width for responsiveness */
-                max-width: 500px; /* Maximum width for larger screens */
-                text-align: center;
-                position: relative;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            }
-
-            /* Close Button */
-            .close-btn {
-                position: absolute;
-                top: 10px;
-                right: 15px;
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: black;
-                cursor: pointer;
-            }
-
-            /* Ensure Modal is Responsive */
-            @media (max-width: 600px) {
-                .modal-content {
-                    width: 95%;
-                }
-            }
-
+   
             .photos img {
                 max-width: 150px; /* Smaller image for mobile */
             }
@@ -240,9 +239,11 @@
    </div>
 
    <footer>
-        <p>By subscribing, you agree to our <a href="javascript:void(0);" id="privacyPolicyLink" style="color: #f7c600; text-decoration: underline;">Privacy Policy</a>.</p>
+        <p>
+            By subscribing, you agree to our
+            <a href="javascript:void(0);" id="privacyPolicyLink" style="color: #f7c600; text-decoration: underline;">Privacy Policy</a>.
+        </p>
     </footer>
-
 
 </div>
 
@@ -251,11 +252,7 @@
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h2>Privacy Policy</h2>
-        <p>
-            Your privacy is important to us. We will only use your email to send you news about Hyperion and will not share your email with third parties.
-            <br><br>
-            
-        </p>
+        <p>Your privacy is important to us. We will only use your email to send you news about Hyperion and will not share your email with third parties.</p>
     </div>
 </div>
 
@@ -271,23 +268,21 @@
     const privacyLink = document.getElementById("privacyPolicyLink");
     const closeBtn = document.querySelector(".close-btn");
 
-    // When the user clicks the "Privacy Policy" link, open the modal
+    // Show the modal when the privacy link is clicked
     privacyLink.addEventListener("click", (event) => {
-        event.preventDefault(); // Block the default link action
+        event.preventDefault(); // Prevent the default link action
         modal.style.display = "flex"; // Show the modal as a flex container
-        window.scrollTo(0, 0); // Ensure the page stays at the top
-        });
-
-
-    // When the user clicks on the close button, close the modal
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
     });
 
-    // When the user clicks outside the modal content, close it
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none"; // Hide the modal
+    });
+
+    // Close the modal when clicking outside the modal content
     window.addEventListener("click", (event) => {
         if (event.target === modal) {
-            modal.style.display = "none";
+            modal.style.display = "none"; // Hide the modal
         }
     });
 </script>
