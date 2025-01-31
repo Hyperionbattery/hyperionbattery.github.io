@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hyperion</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <!-- Link the Monda font -->
     <link href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -156,6 +157,16 @@
         }
 
         /* Photo Section */
+        .viewer-container {
+            width: 90%;
+            max-width: 600px;
+            aspect-ratio: 1; /* Ensures square container */
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+        }
+        
         .photos-container {
             margin-top: 20px;
             text-align: center;
@@ -256,6 +267,15 @@
     </div>
 </div>
 
+<div class="viewer-container">
+        <model-viewer 
+            src="Battery Module for website.gltf" 
+            alt="A 3D model of Hyperion's battery" 
+            auto-rotate 
+            camera-controls 
+            shadow-intensity="1">
+        </model-viewer>
+    
 <div class="photos-container">
     <div class="photos">
         <img src="Battery Module.PNG" alt="Battery Module Photo">
