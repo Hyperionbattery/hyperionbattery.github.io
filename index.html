@@ -38,6 +38,12 @@
             margin-bottom: 30px;
         }
 
+        .logo {
+            width: 600px; /* Adjust as needed */
+            height: auto;
+            margin-top: 20px;
+        }
+        
         .company-name {
             font-family: 'Monda', cursive; /* Apply Monda font */
             font-size: 5.0rem;
@@ -222,6 +228,7 @@
 <body>
 
 <div class="container">
+    <img src="Hyperionlogo.png" alt="Hyperion" class="logo">
     <h1 class="company-name">
         <span class="first-word">Hyper</span><span class="second-word">ion</span>
     </h1>
@@ -275,7 +282,9 @@
             auto-rotate 
             camera-controls 
             shadow-intensity="1"
-            environment-intensity="0.3">
+            environment-intensity="1"
+            exposure="0.8"
+            environment-image="neutral">
         </model-viewer>
     
 <div class="photos-container">
