@@ -62,30 +62,6 @@
             margin: 0.25rem 0; /*4px*/
         }
 
-        /* Mobile Navigation */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 3.75rem; /*60px*/
-                right: 1.25rem; /*20px*/
-                background: #D9F1FF; /* light blue */
-                padding: 0.625rem; /*10px*/
-                border-radius: 0.3125rem; /*5px*/
-                width: 9.375rem; /*150px*/
-                text-align: center;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-
         /* Section Styling */
         .section {
             display: flex;
@@ -97,17 +73,17 @@
 
         .section .textlight, .section .image {
             width: 50%;
-            padding: 1.25rem; /*3px*/
+            padding: 1.25rem; /*20px*/
         }
 
         .section .textdark, .section .image {
             width: 50%;
-            padding: 1.25rem; /*3px*/
+            padding: 1.25rem; /*20px*/
         }
 
         .section .texthome, .section .image {
             width: 50%;
-            padding: 1.25rem; /*3px*/
+            padding: 1.25rem; /*20px*/
         }
 
         .section .texthome {
@@ -162,22 +138,6 @@
         .section:nth-child(odd) {
             background: #005F8D;
             color: white;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 768px) {
-            h1 { font-size: 3.5rem; } /* Scales down for mobile */
-            h2 { font-size: 1.5rem; }
-            p { font-size: 1.25rem; }
-            .small-text { font-size: 1rem; }
-            
-            .section {
-                flex-direction: column !important;
-                text-align: center;
-            }
-            .section .text, .section .image {
-                width: 100%;
-            }
         }
 
         /* Add Space for Navbar */
@@ -269,6 +229,43 @@
             font-weight: bold;
             color: black;
             cursor: pointer;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; } /* Scales down for mobile */
+            h2 { font-size: 1.5rem; }
+            p { font-size: 1.25rem; }
+            .small-text { font-size: 1rem; }
+            
+            .section {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .section .text, .section .image {
+                max-width: 90%;
+            }
+        /* Mobile Navigation */
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 3.75rem; /*60px*/
+                right: 1.25rem; /*20px*/
+                background: #D9F1FF; /* light blue */
+                padding: 0.625rem; /*10px*/
+                border-radius: 0.3125rem; /*5px*/
+                width: 9.375rem; /*150px*/
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
         }
 
     </style>
