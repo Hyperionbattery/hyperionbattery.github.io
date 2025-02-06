@@ -238,6 +238,12 @@
             p { font-size: 1.25rem; }
             .small-text { font-size: 1rem; }
             
+        /* Logo Image */
+            .logo img {
+            height: 3rem; /* Adjust size as needed */
+            width: auto;
+            }
+
             .section {
                 flex-direction: column !important;
                 text-align: center;
@@ -247,6 +253,21 @@
                 max-width: 100%;
             }
             
+            .section .textlight, .section .image {
+            max-width: 100%;
+            padding: 0.625rem; /*20px*/
+            }
+
+            .section .textdark, .section .image {
+            max-width: 100%;
+            padding: 0.625rem; /*20px*/
+            }
+
+            .section .texthome, .section .image {
+            max-width: 100%;
+            padding: 0.625rem; /*20px*/
+            }
+
             .section .texthome {
             font-size: 2.5rem;
             font-weight: bold;
@@ -254,14 +275,14 @@
             line-height: 1.25;
             }
         
-        .section .textlight {
+            .section .textlight {
             font-size: 0.9375rem;
             font-weight: normal;
             color: #D9F1FF; /* light blue */
             line-height: 1.25;
             }
 
-        .section .textdark {
+            .section .textdark {
             font-size: 0.9375rem;
             font-weight: normal;
             color: #005F8D; /* darker blue */
