@@ -7,7 +7,7 @@
     <title>Hyperion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
     <style>
         /* Reset Default Styles */
@@ -17,13 +17,23 @@
             box-sizing: border-box;
         }
 
-        .roboto-normal {
-          font-family: "Roboto", serif;
-          font-optical-sizing: auto;
-          font-weight: 400;
-          font-style: normal;
-          font-variation-settings:
-            "wdth" 100;
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1 {
+            font-weight: 700; /* Bold */
+        }
+        
+        h2 {
+            font-weight: 700; /* Bold */
+        }
+        
+        p {
+            font-weight: 400; /* Regular */
+        }
+        
+        .light-text {
+            font-weight: 300; /* Light */
         }
 
         /* Navbar Styling */
@@ -248,10 +258,10 @@
 
         /* Mobile Responsive Layout */
         @media (max-width: 768px) {
-            h1 { font-size: 3.5rem; } /* Scales down for mobile */
+            h1 { font-size: 2.5rem; } /* Scales down for mobile */
             h2 { font-size: 1.5rem; }
-            p { font-size: 1.25rem; }
-            .small-text { font-size: 1rem; }
+            p { font-size: 1.1rem; }
+            .small-text { font-size: 0.9375rem; }
             
         /* Logo Image */
             .logo img {
@@ -409,7 +419,7 @@
     
     <div id="About" class="section">
         <div class="textlight"> 
-            You can now power your home and equipment with the same battery packs.
+            <h2>You can now power your home and equipment with the same battery packs.</h2>
             <p><br></p>
             Hyperion is creating battery packs that can be used to backup your home or building and also power your electric equipment such as golf carts, lawn equipment, bikes, scooters, and much more. 
             The packs will be swappable between all supported equipment and charge in a wall-mounted rack in your home or business.
@@ -433,9 +443,9 @@
 
     <div id="Benefits" class="section">
         <div class="textdark">
-            What is your lawnmower battery doing when you aren't mowing your lawn? 
+            <h2>What is your lawnmower battery doing when you aren't mowing your lawn? </h2>
             <p></p>
-            Nothing... slacking off. Put it to work.
+            <h2>Nothing... slacking off. Put it to work.</h2>
             <p><br></p>
             <u1>
                 <li>Power your house, transportation, and tools with the same batteries</li>
