@@ -19,6 +19,7 @@
 
         body {
             font-family: 'Roboto', sans-serif;
+            padding-top: 3.75rem; /*60px*/
         }
 
         /* Navbar Styling */
@@ -94,14 +95,14 @@
         }
 
         .section .texthome {
-            font-size: clamp(2rem, 7vw, 5rem);
+            font-size: clamp(2rem, 8vw, 5rem);
             font-weight: bold;
             color: #005F8D; /* darker blue */
             line-height: 1.5;
         }
         
         .section .textlight, .section .textdark {
-            font-size: clamp(1rem, 5vw, 1.75rem);
+            font-size: clamp(1rem, 6vw, 1.75rem);
             font-weight: normal;
             line-height: 1.5;
         }
@@ -117,22 +118,26 @@
         /* Headings */
         h1 {
             font-weight: 700; /* Bold */
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2rem, 7vw, 3.5rem);
         }
         
         h2 {
             font-weight: 700; /* Bold */
-            font-size: clamp(1.75rem, 6vw, 3rem);
+            font-size: clamp(1.75rem, 6.5vw, 3rem);
         }
         
         p {
             font-weight: 400; /* Regular */
-            font-size: clamp(1rem, 5vw, 1.75rem);
+            font-size: clamp(1rem, 6vw, 1.75rem);
         }
         
         ul {
             font-weight: 400; /* Regular */
-            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-size: clamp(1rem, 6vw, 1.75rem);
+        }
+
+        h1, h2, p, ul {
+        max-width: 90vw;  /* Makes sure text doesn’t overflow */
         }
 
         .section .image img {
@@ -169,11 +174,6 @@
         .section:nth-child(odd) {
             background: #005F8D;
             color: white;
-        }
-
-        /* Add Space for Navbar */
-        body {
-            padding-top: 3.75rem; /*60px*/
         }
 
         /* Add Footer*/
@@ -264,10 +264,10 @@
 
         /* Mobile Responsive Layout */
         @media (max-width: 768px) {
-            h1 { font-size: clamp(1.5rem, 3.5vw, 2.5rem); } /* Scales down for mobile */
-            h2 { font-size: clamp(1rem, 2.5vw, 1.5rem); }
-            p { font-size: clamp(1rem, 2.5vw, 1.5rem); }
-            .small-text { font-size: clamp(0.5rem, 1.5vw, 0.9375rem); }
+            h1 { font-size: 2.5rem; } /* Scales down for mobile */
+            h2 { font-size: 1.5rem; }
+            p { font-size: 1.5rem; }
+            .small-text { font-size: 0.9375rem; }
             
         /* Logo Image */
             .logo img {
