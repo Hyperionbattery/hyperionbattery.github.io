@@ -192,6 +192,66 @@
             color: white;
         }
 
+        .gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Slideshow Wrapper */
+        .gallery-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Slideshow Images */
+        .gallery-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .gallery-slide {
+            width: 100%;
+            height: auto;
+            display: none;
+            object-fit: cover;
+        }
+
+        /* Show only the active image */
+        .gallery-slide.active {
+            display: block;
+        }
+
+        /* Navigation Buttons */
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        button.prev {
+            left: 0;
+        }
+        button.next {
+            right: 0;
+        }
+
         /* Add Footer*/
         .email-input-container {
             display: flex;
@@ -365,7 +425,21 @@
             height:270px;
             max-width: 100%;
             }
-
+            
+            .textdark, .gallery {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .textlight, .gallery {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .gallery-wrapper {
+                max-width: 100%;
+            }
+            
             .email-input-container {
             display: flex;
             flex-wrap: wrap;
@@ -429,6 +503,7 @@
             <a href="#Home" onclick="closeMenu()">Home</a>
             <a href="#About" onclick="closeMenu()">About</a>
             <a href="#Benefits" onclick="closeMenu()">Benefits</a>
+            <a href="#Gallery" onclick="closemenu()">Gallery</a>
             <a href="#Team" onclick="closeMenu()">Team</a>
             <a href="#Contact" onclick="closeMenu()">Contact</a>
         </div>
@@ -483,8 +558,35 @@
         <div class="image"><img src="Home swapping station_perspective_transparent.png" alt="Hyperion's home charging rack and swapping system"></div>
     </div>
 
-    <div id="Team" class="section">
+
+    <div id="Gallery" class="section">
         <div class="textlight">
+            <h2>Prototype Gallery</h2>
+            <br>
+            <p>We have built a prototype from off-the-shelf bike batteries and other hardware to demonstrate the concept of swapping batteries from powering a shed, to an ebike, to a golf cart, and recharging with solar panels.
+                The prototype uses 4 battery packs which slide in and out of the rack horizontally.
+                <br>
+                <br>
+                Do not try this at home. It looks simple, but requires a custom energy management system to prevent the batteries from discharging into each other and causing rapid overheating.
+            </p>
+        </div>
+            <div class="image gallery">
+                <div class="gallery-wrapper">
+                    <button class="prev">&#10094;</button>
+                    <div class="gallery-slides">
+                        <img src="prototype_topview.JPG" class="gallery-slide" alt="Hyperion's battery swapping prototype including a view of the solar panels on the shed roof">
+                        <img src="Battery_insertion.png" class="gallery-slide" alt="A battery pack being inserted into the Hyperion swapping rack">
+                        <img src="bike insertion.png" class="gallery-slide active" alt="Hyperion's battery swapping into an ebike">
+                        <img src="batteries in golf cart.png" class="gallery-slide" alt="Prototype batteries mounted in a golf cart under the seat">
+                    </div>
+                    <button class="next">&#10095;</button>
+                </div>  
+            </div>
+    </div>
+    
+
+    <div id="Team" class="section">
+        <div class="textdark">
             <h2>Meet the Team</h2>
             <p><br></p>
             CEO Matt’s career aspiration is to make as much impact on the climate crisis and energy transition as possible. He has an MS and PhD in sustainable engineering, with a concentration in energy systems. 
@@ -498,7 +600,7 @@
     </div>
 
     <div id="Contact" class="section">
-        <div class="textdark">Interested in our vision for the future of energy storage? Join our mailing list to stay up to date on Hyperion's development.</div>
+        <div class="textlight">Interested in our vision for the future of energy storage? Join our mailing list to stay up to date on Hyperion's development.</div>
         <!--<div class="image"><img src="image5.jpg" alt="Image 5"></div>-->
 
         <div class="email-input-container">
@@ -566,6 +668,62 @@
             modal.style.display = "none"; // Hide the modal
         }
     });
+
+    // JavaScript for slideshow gallery
+    document.addEventListener("DOMContentLoaded", function () {
+        let index = 0;
+        const slides = document.querySelectorAll(".gallery-slide");
+        const totalSlides = slides.length;
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+        let interval = setInterval(nextSlide, 5000); // Auto-change every 5 seconds
+
+        function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+        }
+
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide(index);
+        }
+
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetTimer();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetTimer();
+        });
+
+        function resetTimer() {
+            clearInterval(interval);
+            interval = setInterval(nextSlide, 5000);
+        }
+
+        showSlide(index);
+
+        // Touch swipe support for mobile
+        let startX = 0;
+        document.querySelector(".gallery").addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        document.querySelector(".gallery").addEventListener("touchend", (e) => {
+            let endX = e.changedTouches[0].clientX;
+            if (startX > endX + 50) nextSlide();  // Swipe Left
+            if (startX < endX - 50) prevSlide();  // Swipe Right
+            resetTimer();
+        });
+        });
+
     </script>
 
 </body>
