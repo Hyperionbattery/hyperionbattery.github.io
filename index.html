@@ -96,48 +96,38 @@
             justify-content: center;
             height: 100vh;
             padding: 3.125rem; /*50px*/
+            clear: both;
         }
 
-        .section .texthome, .section .image {
+        .section .image {
             width: 50%;
             padding: 1.25rem; /*20px*/
         }
         
-        .section .textlight, .section .image {
-            width: 50%;
-            padding: 1.25rem; /*20px*/
-        }
 
-        .section .textdark, .section .image {
+        .section .text {
             width: 50%;
-            padding: 1.25rem; /*20px*/
-        }
-
-        .section .texthome {
-            font-size: clamp(2rem, 3vw, 5rem);
-            font-weight: bold;
-            color: #005F8D; /* darker blue */
             line-height: 1.5;
+            padding: 1.25rem; /*20px*/
         }
         
-        .section .textlight, .section .textdark {
-            font-size: clamp(0.75rem, 1.5vw, 1.75rem);
-            font-weight: normal;
-            line-height: 1.5;
+
+        /* Alternate Layouts */
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+            background: #D9F1FF;
+            color:#005F8D;
         }
-        
-        .section .textlight {
-            color: #D9F1FF; /* light blue */
-        }
-        
-        .section .textdark {
-            color: #005F8D; /* darker blue */
+
+        .section:nth-child(odd) {
+            background: #005F8D;
+            color: white;
         }
         
         /* Headings */
         h1 {
             font-weight: 700; /* Bold */
-            font-size: clamp(2rem, 3vw, 3rem); /* 3.5rem */
+            font-size: clamp(2rem, 3vw, 5rem);; /* 3.5rem */
         }
         
         h2 {
@@ -153,6 +143,7 @@
         ul {
             font-weight: 400; /* Regular */
             font-size: clamp(0.75rem, 1.5vw, 1.75rem); /* 1.75rem */
+            line-height: 1.75;
         }
 
 
@@ -165,6 +156,25 @@
             justify-content: center;  /* Centers horizontally */
             align-items: center;  /* Centers vertically */
             text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #005F8D; /* Dark Blue */
+            color: white;
+            padding: 0.75rem 2rem; /* More padding for a rounded rectangle */
+            margin-left: 2%;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-radius: 50px; /* This creates the rounded rectangle */
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #003F5D; /* Darker shade on hover */
+            transform: scale(1.05); /* Slight pop effect */
         }
 
         .model-container {
@@ -180,16 +190,32 @@
             max-width: 100%;
         }
 
-        /* Alternate Layouts */
-        .section:nth-child(even) {
-            flex-direction: row-reverse;
-            background: #D9F1FF;
-            color:#005F8D;
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh; /* Ensures full height */
+            position: relative;
+            background: linear-gradient(135deg, #005F8D, #D9F1FF); /* Adds a gradient effect */
         }
 
-        .section:nth-child(odd) {
-            background: #005F8D;
-            color: white;
+        .video-container {
+            position: relative;
+            width: 90%; /* Adjust size as needed */
+            max-width: 1200px;
+            height: 60vh; /* Adjust to fit nicely */
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px; /* Adds a modern, rounded-corner effect */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gives it depth */
         }
 
         .gallery {
@@ -213,23 +239,38 @@
             justify-content: center;
         }
 
-        /* Slideshow Images */
-        .gallery-slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+        /* Wrap each image and caption together */
+        .gallery-item {
+            display: none;
+            position: relative;
             width: 100%;
         }
 
+        /* Only display the active gallery item */
+        .gallery-item.active {
+            display: block;
+        }
+
+        /* Image styling remains the same */
         .gallery-slide {
             width: 100%;
             height: auto;
-            display: none;
             object-fit: cover;
         }
 
-        /* Show only the active image */
-        .gallery-slide.active {
-            display: block;
+        /* Caption Styling */
+        .gallery-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+            text-align: center;
+            width: 80%;
+            border-radius: 5px;
         }
 
         /* Navigation Buttons */
@@ -257,8 +298,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
+            padding: 1.25rem; /*20px*/
         }
 
         .email-input {
@@ -342,8 +382,8 @@
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; } /* Scales down for mobile */
             h2 { font-size: 1.5rem; }
-            p { font-size: 1.1rem; }
-            .small-text { font-size: 0.9375rem; }
+            p { font-size: 0.75rem; }
+            .small-text { font-size: 0.625rem; }
             
         /* Logo Image */
             .logo img {
@@ -363,51 +403,14 @@
             }
             .section .text, .section .image {
                 max-width: 100%;
+                padding: 0.625rem; /*20px*/
             }
             
-            .section .textlight, .section .image {
-            width: 100%;
-            padding: 0.625rem; /*20px*/
-            }
-
-            .section .textdark, .section .image {
-            width: 100%;
-            padding: 0.625rem; /*20px*/
-            }
-
-            .section .texthome, .section .image {
-            width: 100%;
-            padding: 0.625rem; /*20px*/
-            }
-
-            .section .texthome {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #005F8D; /* darker blue */
+            .section .text {
             line-height: 1.25;
             text-justify: center;
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
             }
         
-            .section .textlight {
-            font-size: 1.1rem;
-            font-weight: normal;
-            color: #D9F1FF; /* light blue */
-            line-height: 1.25;
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
-            }
-
-            .section .textdark {
-            font-size: 1.1rem;
-            font-weight: normal;
-            color: #005F8D; /* darker blue */
-            line-height: 1.25;
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
-            }
-
             .section .image img {
             width: auto;
             max-width: 100%;
@@ -417,8 +420,6 @@
             align-items: center;  /* Centers vertically */
             text-align: center;
             border-radius: 0.625rem; /*10px*/
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
             }
 
             .model-container {
@@ -426,55 +427,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
             }
             
             model-viewer {
             width: 100%;
             height:270px;
             max-width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1.25rem; /*20px*/
-            margin-bottom: 0.625rem; /*10px*/
             }
             
-            .textdark, .gallery {
-                width: auto;
-                max-width: 100%;
-                height: auto;
-                max-height: 50vh;
-                justify-content: center;  /* Centers horizontally */
-                align-items: center;  /* Centers vertically */
+            .text, .gallery {
+                width: 100%;
                 text-align: center;
-                border-radius: 0.625rem; /*10px*/
-                margin-top: 1.25rem; /*20px*/
-                margin-bottom: 0.625rem; /*10px*/
             }
             
-            .textlight, .gallery {
-                width: auto;
-                max-width: 100%;
-                height: auto;
-                max-height: 50vh;
-                justify-content: center;  /* Centers horizontally */
-                align-items: center;  /* Centers vertically */
-                text-align: center;
-                border-radius: 0.625rem; /*10px*/
-                margin-top: 1.25rem; /*20px*/
-                margin-bottom: 0.625rem; /*10px*/
-            }
             
             .gallery-wrapper {
-                width: auto;
                 max-width: 100%;
-                height: auto;
-                max-height: 50vh;
-                justify-content: center;  /* Centers horizontally */
-                align-items: center;  /* Centers vertically */
-                text-align: center;
-                border-radius: 0.625rem; /*10px*/
             }
             
             .email-input-container {
@@ -529,7 +497,8 @@
     <!-- Navigation Bar -->
     <div class="navbar">
         <div class="logo">
-            <img src="Hyperionlogo blue background.png" alt="Hyperion's Logo"> <!-- Display logo file in nav bar -->
+            <a href="#Home"><img src="Hyperionlogo blue background.png" alt="Hyperion's Logo"></a> <!-- Display logo file in nav bar -->
+           
         </div>
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
@@ -539,30 +508,37 @@
         <div class="nav-links">
             <a href="#Home" onclick="closeMenu()">Home</a>
             <a href="#About" onclick="closeMenu()">About</a>
-            <a href="#Benefits" onclick="closeMenu()">Benefits</a>
+            <a href="#Demo" onclick="closeMenu()">Demo</a>
             <a href="#Gallery" onclick="closemenu()">Gallery</a>
+            <a href="#Benefits" onclick="closeMenu()">Benefits</a>
             <a href="#Team" onclick="closeMenu()">Team</a>
-            <a href="#Contact" onclick="closeMenu()">Contact</a>
+            <a href="#Mailing List" onclick="closeMenu()">Mailing List</a>
         </div>
     </div>
 
     <!-- Page Sections -->
     <div id="Home" class="section">
-        <div class="texthome">Swappable batteries to power your home and equipment</div>
+        <div class="text">
+            <h1>Swappable batteries to power your home and equipment</h1>
+            <br>
+            <br>
+            <p>Scroll to learn more or <a href="#Mailing List" class="cta-button">Join Our Mailing List</a></p>
+                
+        </div>
         <div class="image"><img src="House with golf cart.jpg" alt="A house with solar panels, a battery energy storage system, and an electric golf cart in the garage"></div>
     </div>
     
     <div id="About" class="section">
-        <div class="textlight"> 
+        <div class="text"> 
             <h2>You can now power your home and equipment with the same battery packs.</h2>
             <p><br></p>
-            Hyperion is creating battery packs that can be used to backup your home or building and also power your electric equipment such as golf carts, lawn equipment, bikes, scooters, and much more. 
+            <p>Hyperion is creating battery packs that can be used to backup your home or building and also power your electric equipment such as golf carts, lawn equipment, bikes, scooters, and much more. 
             The packs will be swappable between all supported equipment and charge in a wall-mounted rack in your home or business.
-            It will be the most flexible and modular BESS available.
+            It will be the most flexible and modular BESS available.</p>
             <p><br></p>
-            You can save money on your electricity bills, forget about grid outages, and achieve energy independence.
+            <p>You can save money on your electricity bills, forget about grid outages, and achieve energy independence.
             Battery swapping eliminates charging downtime and uses DC solar power more efficiently. 
-            You can also buy fewer batteries since you won't need to buy discrete batteries for your home and all your equipment. </div>
+            You can also buy fewer batteries since you won't need to buy discrete batteries for your home and all your equipment.</p> </div>
             <div class="model-container">
                 <model-viewer 
                     src="BatteryModuleforwebsite2.gltf" 
@@ -576,28 +552,26 @@
             <!--<div class="image"><img src="Battery Module.PNG" alt="Hyperion's universal battery pack"></div>-->
     </div>
 
-    <div id="Benefits" class="section">
-        <div class="textdark">
-            <h2>What is your lawnmower battery doing when you aren't mowing your lawn? </h2>
-            <p></p>
-            <h2>Nothing... put it to work.</h2>
-            <p><br></p>
-            <u1>
-                <li>Power your house, transportation, and tools with the same batteries</li>
-                <li>Gain independence from the grid and never worry about outages again</li>
-                <li>Save money on your electricity bill</li>
-                <li>Swap packs in seconds, don't wait for recharging</li>
-                <li>Use Hyperion batteries to power tools you already own from other brands</li>
-                <li>Buy your tools without their own batteries and save</li>
-                <li>Use your solar power more efficiently</li>
-            </u1>
+    <div id="Demo" class="section video-section">
+        <div class="text">
+            <h2>Watch Our Prototype Demo</h2>
+            <p>See our prototype in action in this quick demo video.</p>
         </div>
-        <div class="image"><img src="Home swapping station_perspective_transparent.png" alt="Hyperion's home charging rack and swapping system"></div>
+        <div class="video-container">
+            <iframe width="2543" height="1116" 
+                    src="https://www.youtube.com/embed/A2FkaSyfDF8" 
+                    title="Hyperion Introduction and Prototype Battery Swapping Demo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </iframe>
+        </div>
     </div>
 
-
+    
     <div id="Gallery" class="section">
-        <div class="textlight">
+        <div class="text">
             <h2>Prototype Gallery</h2>
             <br>
             <p>We have built a prototype from off-the-shelf bike batteries and other hardware to demonstrate the concept of swapping batteries from powering a shed, to an ebike, to a golf cart, and recharging with solar panels.
@@ -611,33 +585,69 @@
                 <div class="gallery-wrapper">
                     <button class="prev">&#10094;</button>
                     <div class="gallery-slides">
-                        <img src="prototype_topview.JPG" class="gallery-slide active" alt="Hyperion's battery swapping prototype including a view of the solar panels on the shed roof">
-                        <img src="Battery_insertion.png" class="gallery-slide" alt="A battery pack being inserted into the Hyperion swapping rack">
-                        <img src="bike insertion.png" class="gallery-slide" alt="Hyperion's battery swapping into an ebike">
-                        <img src="batteries in golf cart.png" class="gallery-slide" alt="Prototype batteries mounted in a golf cart under the seat">
+                        <div class="gallery-item active">
+                            <img src="prototype_topview.JPG" class="gallery-slide" alt="Hyperion's battery swapping prototype including a view of the solar panels on the shed roof">
+                            <p class="gallery-caption">Hyperion's battery swapping prototype with a view of the solar panels on the shed roof</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Battery_insertion.png" class="gallery-slide" alt="A battery pack being inserted into the Hyperion swapping rack">
+                            <p class="gallery-caption">A battery pack being inserted into the Hyperion swapping rack</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="bike insertion.png" class="gallery-slide active" alt="Hyperion's battery swapping into an ebike">
+                            <p class="gallery-caption">Hyperion's battery pack swapping into an ebike</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="batteries in golf cart.png" class="gallery-slide" alt="Prototype batteries mounted in a golf cart under the seat">
+                            <p class="gallery-caption">Prototype batteries mounted in a golf cart under the seat</p>
+                        </div>
                     </div>
                     <button class="next">&#10095;</button>
                 </div>  
             </div>
-    </div>
+    </div>    
     
+    
+    <div id="Benefits" class="section">
+        <div class="text">
+            <h2>What is your lawnmower battery doing when you aren't mowing your lawn? </h2>
+            <p></p>
+            <h2>Nothing... put it to work.</h2>
+            <br>
+            <ul>
+                <li>Power your house, transportation, and tools with the same batteries</li>
+                <li>Gain independence from the grid and never worry about outages again</li>
+                <li>Save money on your electricity bill</li>
+                <li>Swap packs in seconds, don't wait for recharging</li>
+                <li>Use Hyperion batteries to power tools you already own from other brands</li>
+                <li>Buy your tools without their own batteries and save</li>
+                <li>Use your solar power more efficiently</li>
+            </ul>
+        </div>
+        <div class="image"><img src="Home swapping station_perspective_transparent.png" alt="Hyperion's home charging rack and swapping system"></div>
+    </div>
+
 
     <div id="Team" class="section">
-        <div class="textdark">
+        <div class="text">
             <h2>Meet the Team</h2>
-            <p><br></p>
+            <p><br>
             CEO Matt’s career aspiration is to make as much impact on the climate crisis and energy transition as possible. He has an MS and PhD in sustainable engineering, with a concentration in energy systems. 
-            He is confident battery storage will unlock the true potentail of renewable energy.
-            <p><br></p>
+            He is confident battery storage will unlock the true potentail of renewable energy.</p>
+            <p><br>
             CTO Cel is a homeowner with 2 EVs and a full workshop of electric carpentry and lawncare tools. He has been waiting for this solution, but he's done waiting, it's time to build it.
-            He holds an MS in electrical engineering and has battery expertise from his previous job performing battery failure analysis.</div>
+            He holds an MS in electrical engineering and has battery expertise from his previous job performing battery failure analysis.</p></div>
         <div class="image"><img src="Matt and Cel headshots.png" alt="Image of the Hyperion cofounders, Matt and Cel">
-            <p>Matt, CEO (left) and Cel, CTO (right)</p>
+            <p>Matt Ashcroft, CEO (left) and Cel Alem, CTO (right)</p>
         </div>
     </div>
 
-    <div id="Contact" class="section">
-        <div class="textlight">Interested in our vision for the future of energy storage? Join our mailing list to stay up to date on Hyperion's development.</div>
+    <div id="Mailing List" class="section">
+        <div class="text">
+            <h2>Mailing List</h2>
+            <br>
+            <p>Interested in our vision for the future of energy storage? Join our mailing list to stay up to date on Hyperion's development.</p>
+        </div>
         <!--<div class="image"><img src="image5.jpg" alt="Image 5"></div>-->
 
         <div class="email-input-container">
@@ -709,16 +719,33 @@
     // JavaScript for slideshow gallery
     document.addEventListener("DOMContentLoaded", function () {
         let index = 0;
-        const slides = document.querySelectorAll(".gallery-slide");
+        const slides = document.querySelectorAll(".gallery-item");
         const totalSlides = slides.length;
         const nextBtn = document.querySelector(".next");
         const prevBtn = document.querySelector(".prev");
         let interval = setInterval(nextSlide, 5000); // Auto-change every 5 seconds
 
-        function showSlide(i) {
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[i].classList.add("active");
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        });
         }
+
+        document.querySelector('.next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }, 5000);
 
         function nextSlide() {
             index = (index + 1) % totalSlides;
