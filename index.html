@@ -205,7 +205,7 @@
             position: relative;
             width: 90%; /* Adjust size as needed */
             max-width: 1200px;
-            height: 60vh; /* Adjust to fit nicely */
+            height: 56.25vh; /* Adjust to fit nicely */
             padding: 2.5rem;
             display: flex;
             align-items: center;
@@ -400,8 +400,9 @@
             .section {
                 flex-direction: column !important;
                 text-align: left;
-                height: 120vh;
+                height: auto;
                 padding: 0.625rem;
+                overflow: visible; /* Prevent content from being cut off */
             }
             .section .text, .section .image {
                 width:100%;
@@ -426,6 +427,13 @@
             border-radius: 0.625rem; /*10px*/
             }
 
+            .cta-button {
+                font-size: 1rem; /* Reduce text size */
+                padding: 0.5rem 1.5rem; /* Reduce padding */
+                width: 45%; /* Make it span across width */
+                text-align: center;
+            }
+
             .model-container {
             width: 100%;
             display: flex;
@@ -438,15 +446,59 @@
             height:270px;
             max-width: 100%;
             }
+
+            .video-container {
+                width: 100%; /* Ensure it spans the width */
+                height: auto;
+                padding: 0; /* Reduce padding */
+            }
+
+            .video-container iframe {
+                width: 100%;
+                height: 56.25vw; /* Maintain 16:9 aspect ratio */
+                max-height: 60vh;
+                border-radius: 10px;
+            }
             
             .text, .gallery {
                 width: 100%;
                 text-align: left;
             }
             
-            
-            .gallery-wrapper {
+            .gallery {
+                width: 100% !important;
                 max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center content */
+                justify-content: center;
+                margin: 0 auto;
+                padding: 0;
+                position: relative;
+            }
+
+            .gallery-wrapper {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .gallery-item {
+                width: 100% !important;
+                max-width: 100%;
+                display: block;
+            }
+
+            .gallery-slide {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
             }
             
             .email-input-container {
@@ -513,7 +565,7 @@
             <a href="#Home" onclick="closeMenu()">Home</a>
             <a href="#About" onclick="closeMenu()">About</a>
             <a href="#Demo" onclick="closeMenu()">Demo</a>
-            <a href="#Gallery" onclick="closemenu()">Gallery</a>
+            <a href="#Gallery" onclick="closeMenu()">Gallery</a>
             <a href="#Benefits" onclick="closeMenu()">Benefits</a>
             <a href="#Team" onclick="closeMenu()">Team</a>
             <a href="#Mailing List" onclick="closeMenu()">Mailing List</a>
@@ -585,7 +637,7 @@
                 Do not try this at home. It looks simple, but requires a custom energy management system to prevent the batteries from discharging into each other and causing rapid overheating.
             </p>
         </div>
-            <div class="image gallery">
+            <div class="gallery">
                 <div class="gallery-wrapper">
                     <button class="prev">&#10094;</button>
                     <div class="gallery-slides">
