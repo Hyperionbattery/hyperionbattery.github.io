@@ -144,6 +144,7 @@
             font-weight: 400; /* Regular */
             font-size: clamp(0.75rem, 1.5vw, 1.75rem); /* 1.75rem */
             line-height: 1.75;
+            margin-left: 1.5rem;
         }
 
 
@@ -399,28 +400,29 @@
             .section {
                 flex-direction: column !important;
                 text-align: left;
-                width: 90%;
                 height: 120vh;
                 padding: 0.625rem;
             }
             .section .text, .section .image {
+                width:100%;
                 max-width: 100%;
                 padding: 0.625rem; /*20px*/
             }
             
             .section .text {
             line-height: 1.25;
-            text-justify: center;
+            text-justify: left;
             }
         
             .section .image img {
-            width: auto;
             max-width: 100%;
             height: auto;
             max-height: 50vh;
+            display: block; /* Removes extra space below inline images */
+            margin: 0 auto; /* Centers the image */
             justify-content: center;  /* Centers horizontally */
             align-items: center;  /* Centers vertically */
-            text-align: center;
+            text-align: left;
             border-radius: 0.625rem; /*10px*/
             }
 
@@ -439,7 +441,7 @@
             
             .text, .gallery {
                 width: 100%;
-                text-align: center;
+                text-align: left;
             }
             
             
