@@ -50,14 +50,14 @@
             justify-content: space-between;
             align-items: center;
             color: black;
-            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
             font-weight: bold;
             z-index: 1000;
         }
 
         /* Logo Image */
         .logo img {
-            height: 4rem; /* Adjust size as needed */
+            height: clamp(2.25rem, 3vw, 4rem); /* Adjust size as needed */
             width: auto;
         }
 
@@ -70,7 +70,7 @@
         .nav-links a {
             color: black;
             text-decoration: none;
-            font-size: clamp(0.75rem, 10vw, 1.5rem);
+            font-size: clamp(0.75rem, 2vw, 1.5rem);
         }
 
         /* Hamburger Icon */
@@ -83,7 +83,7 @@
         .hamburger div {
             width: 1.5625rem; /*25px*/
             height: 0.1875rem; /*3px*/
-            background: #D9F1FF; /* light blue */
+            background: #005F8D; /* light blue */
             margin: 0.25rem 0; /*4px*/
         }
 
@@ -165,7 +165,7 @@
             color: white;
             padding: 0.75rem 2rem; /* More padding for a rounded rectangle */
             margin-left: 2%;
-            font-size: 1.25rem;
+            font-size: clamp(0.75rem, 1.5vw, 1.5rem);
             font-weight: bold;
             border-radius: 50px; /* This creates the rounded rectangle */
             text-decoration: none;
