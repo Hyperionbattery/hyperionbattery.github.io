@@ -1,0 +1,5 @@
+title: My Website
+description: A GitHub Pages site with a blog
+markdown: kramdown
+theme: minima
+permalink: /blog/:year/:month/:day/:title/
