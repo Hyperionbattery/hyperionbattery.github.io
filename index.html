@@ -800,20 +800,22 @@
        </div>
     </div>
 
-    <div id="Blog">
+    <section id="Blog" class="section">
       <div class="text">
         <h2>Blog</h2>
         <div class="posts">
           {% for post in site.posts limit:3 %}
-            <article>
+            <article class="post">
               <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
               <p>{{ post.excerpt }}</p>
-              <p><a href="{{ post.url }}">Read more...</a></p>
+              <a class="read-more" href="{{ post.url }}">Read more →</a>
             </article>
           {% endfor %}
         </div>
       </div>
-    </div>
+    </section>
+
 
 </div>
 
