@@ -569,6 +569,7 @@
             <a href="#Benefits" onclick="closeMenu()">Benefits</a>
             <a href="#Team" onclick="closeMenu()">Team</a>
             <a href="#Mailing List" onclick="closeMenu()">Mailing List</a>
+            <a href="Blog" onclick="closemenu()">Blog</a>
         </div>
     </div>
 
@@ -727,6 +728,20 @@
        </div>
     </div>
 
+    <div id="Blog">
+      <div class="text">
+        <h2>Blog</h2>
+        <div class="posts">
+          {% for post in site.posts limit:3 %}
+            <article>
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <p>{{ post.excerpt }}</p>
+              <p><a href="{{ post.url }}">Read more...</a></p>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
 
 </div>
 
