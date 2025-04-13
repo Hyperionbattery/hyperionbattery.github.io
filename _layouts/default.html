@@ -1,4 +1,33 @@
-    <!-- Navigation Bar -->
+<head>    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y75KRXVT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3Y75KRXVT7');
+</script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hyperion battery swapping for your home and electric equipment">
+    <meta name="keywords" content="battery energy storage, battery swapping, solar battery, home batteries, renewable energy storage, residential battery, BESS, Power backup, store extra solar">
+    <meta name="author" content="Matthew Ashcroft">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Hyperion">
+    <meta property="og:description" content="Hyperion battery swapping for your home and electric equipment">
+    <meta property="og:image" content="https://www.hyperionbattery.com/Home%20swapping%20station_perspective_transparent.png">
+    <meta property="og:url" content="https://hyperionbattery.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hyperion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+</head>
+
+<body>
+<!-- Navigation Bar -->
     <div class="navbar">
         <div class="logo">
             <a href="#Home"><img src="Hyperionlogo blue background.png" alt="Hyperion's Logo"></a> <!-- Display logo file in nav bar -->
@@ -202,3 +231,111 @@
         <p>Your privacy is important to us. We will only use your email to send you news about Hyperion and will not share your email with third parties.</p>
     </div>
 </div>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('active');
+        }
+
+        // Get the modal, the link, and the close button
+    const modal = document.getElementById("privacyModal");
+    const privacyLink = document.getElementById("privacyPolicyLink");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Show the modal when the privacy link is clicked
+    privacyLink.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default link action
+        modal.style.display = "flex"; // Show the modal as a flex container
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none"; // Hide the modal
+    });
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none"; // Hide the modal
+        }
+    });
+
+    // JavaScript for slideshow gallery
+    document.addEventListener("DOMContentLoaded", function () {
+        let index = 0;
+        const slides = document.querySelectorAll(".gallery-item");
+        const totalSlides = slides.length;
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+        let interval = setInterval(nextSlide, 5000); // Auto-change every 5 seconds
+
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        });
+        }
+
+        document.querySelector('.next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }, 5000);
+
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide(index);
+        }
+
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetTimer();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetTimer();
+        });
+
+        function resetTimer() {
+            clearInterval(interval);
+            interval = setInterval(nextSlide, 5000);
+        }
+
+        showSlide(index);
+
+        // Touch swipe support for mobile
+        let startX = 0;
+        document.querySelector(".gallery").addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        document.querySelector(".gallery").addEventListener("touchend", (e) => {
+            let endX = e.changedTouches[0].clientX;
+            if (startX > endX + 50) nextSlide();  // Swipe Left
+            if (startX < endX - 50) prevSlide();  // Swipe Right
+            resetTimer();
+        });
+        });
+
+    </script>
+    </body>
