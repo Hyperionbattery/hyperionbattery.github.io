@@ -84,13 +84,13 @@
         
 
         /* Alternate Layouts */
-        .section:nth-child(even) {
+        .section:nth-of-type(even) {
             flex-direction: row-reverse;
             background: #D9F1FF;
             color:#005F8D;
         }
 
-        .section:nth-child(odd) {
+        .section:nth-of-type(odd) {
             background: #005F8D;
             color: white;
         }
