@@ -36,7 +36,7 @@
         const totalSlides = slides.length;
         const nextBtn = document.querySelector(".next");
         const prevBtn = document.querySelector(".prev");
-        let interval = setInterval(nextSlide, 5000); // Auto-change every 5 seconds
+        let interval = setInterval(nextSlide, 6000); // Auto-change every 5 seconds
 
         function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -58,7 +58,7 @@
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slides.length;
             showSlide(currentIndex);
-        }, 5000);
+        }, 6000);
 
         function nextSlide() {
             index = (index + 1) % totalSlides;
