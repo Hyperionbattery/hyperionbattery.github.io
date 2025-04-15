@@ -1,3 +1,6 @@
+<DOCTYPE html>
+<html lang="en">
+
 <head>    
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y75KRXVT7"></script>
@@ -24,15 +27,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+<!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
+    {{ content }}   
 <!-- Navigation Bar -->
-    <div class="navbar">
+<!--    <div class="navbar">
         <div class="logo">
             <a href="#Home"><img src="Hyperionlogo blue background.png" alt="Hyperion's Logo"></a> <!-- Display logo file in nav bar -->
            
-        </div>
+ <!--       </div>
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -51,7 +57,7 @@
     </div>
 
     <!-- Page Sections -->
-    <div id="Home" class="section">
+<!--    <div id="Home" class="section">
         <div class="text">
             <h1>Swappable batteries to power your home and equipment</h1>
             <br>
@@ -84,7 +90,7 @@
                 </model-viewer>
             </div>
             <!--<div class="image"><img src="Battery Module.PNG" alt="Hyperion's universal battery pack"></div>-->
-    </div>
+<!--    </div>
 
     <div id="Demo" class="section video-section">
         <div class="text">
@@ -184,19 +190,19 @@
         </div>
         <!--<div class="image"><img src="image5.jpg" alt="Image 5"></div>-->
 
-        <div class="email-input-container">
+<!--        <div class="email-input-container">
             <!-- <input type="email" class="email-input" placeholder="Enter your email" required>
             <button class="submit-btn">Subscribe</button>
             -->
-            <form action="https://formspree.io/f/xlddgwrd" method="POST">
+<!--           <form action="https://formspree.io/f/xlddgwrd" method="POST">
                 <!-- Honeypot for spam prevention -->
-                <input type="text" name="_honeypot" style="display:none">
+ <!--               <input type="text" name="_honeypot" style="display:none">
         
                 <!-- Email input -->
-                <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
+  <!--              <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
         
                 <!-- Submit button -->
-                <button type="submit" class="submit-btn">Subscribe</button>
+  <!--              <button type="submit" class="submit-btn">Subscribe</button>
                 <footer>
                         By subscribing, you agree to our
                         <a href="javascript:void(0);" id="privacyPolicyLink" style="color: #f7c600; text-decoration: underline;">Privacy Policy</a>.
@@ -223,119 +229,17 @@
     </section>
     
 
-<!-- Modal Structure -->
-<div id="privacyModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Privacy Policy</h2>
-        <p>Your privacy is important to us. We will only use your email to send you news about Hyperion and will not share your email with third parties.</p>
+    <!-- Modal Structure -->
+<!--    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>Your privacy is important to us. We will only use your email to send you news about Hyperion and will not share your email with third parties.</p>
+        </div>
     </div>
-</div>
 
-    <!-- JavaScript for Hamburger Menu -->
-    <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-        
-        function closeMenu() {
-            document.querySelector('.nav-links').classList.remove('active');
-        }
-
-        // Get the modal, the link, and the close button
-    const modal = document.getElementById("privacyModal");
-    const privacyLink = document.getElementById("privacyPolicyLink");
-    const closeBtn = document.querySelector(".close-btn");
-
-    // Show the modal when the privacy link is clicked
-    privacyLink.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent the default link action
-        modal.style.display = "flex"; // Show the modal as a flex container
-    });
-
-    // Close the modal when the close button is clicked
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none"; // Hide the modal
-    });
-
-    // Close the modal when clicking outside the modal content
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none"; // Hide the modal
-        }
-    });
-
-    // JavaScript for slideshow gallery
-    document.addEventListener("DOMContentLoaded", function () {
-        let index = 0;
-        const slides = document.querySelectorAll(".gallery-item");
-        const totalSlides = slides.length;
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
-        let interval = setInterval(nextSlide, 5000); // Auto-change every 5 seconds
-
-        function showSlide(index) {
-        slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        });
-        }
-
-        document.querySelector('.next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        });
-
-        document.querySelector('.prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            showSlide(currentIndex);
-        });
-
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        }, 5000);
-
-        function nextSlide() {
-            index = (index + 1) % totalSlides;
-            showSlide(index);
-        }
-
-        function prevSlide() {
-            index = (index - 1 + totalSlides) % totalSlides;
-            showSlide(index);
-        }
-
-        nextBtn.addEventListener("click", () => {
-            nextSlide();
-            resetTimer();
-        });
-
-        prevBtn.addEventListener("click", () => {
-            prevSlide();
-            resetTimer();
-        });
-
-        function resetTimer() {
-            clearInterval(interval);
-            interval = setInterval(nextSlide, 5000);
-        }
-
-        showSlide(index);
-
-        // Touch swipe support for mobile
-        let startX = 0;
-        document.querySelector(".gallery").addEventListener("touchstart", (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        document.querySelector(".gallery").addEventListener("touchend", (e) => {
-            let endX = e.changedTouches[0].clientX;
-            if (startX > endX + 50) nextSlide();  // Swipe Left
-            if (startX < endX - 50) prevSlide();  // Swipe Right
-            resetTimer();
-        });
-        });
-
-    </script>
-    </body>
+    <!-- JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    
+</body>
+</html>
