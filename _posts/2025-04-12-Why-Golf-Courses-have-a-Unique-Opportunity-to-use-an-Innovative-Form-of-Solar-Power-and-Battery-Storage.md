@@ -44,11 +44,11 @@ These battery packs may also be used to power course maintenance equipment in th
 Sources
 
 
-[^1]: https://www.researchgate.net/publication/362095172_Water_use_and_management_practices_on_US_golf_courses
-[^2]: https://www.greenenergytimes.org/2020/06/37102/ 
-[^3]: https://acesgolf.com/blackhawk-members-commit-to-major-solar-project/ 
-[^4]: https://www.gcsaa.org/docs/default-source/Environment/phase-2-energy-survey-full-report.pdf?sfvrsn=9cedeb3e_2
-[^5]: https://www.usga.org/content/dam/usga/images/course-care/water-resource-center/bmps-irrigating-golf-course-turf-rutgers-univ.pdf
-[^6]: https://palmetto.com/solar/what-is-solar-islanding-and-anti-islanding
-[^7]: https://ww2.arb.ca.gov/news/carb-approves-updated-regulations-requiring-most-new-small-road-engines-be-zero-emission-2024 
-[^8]: https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2021/sore21/carb_sore_faq.pdf
+[^1]: [ResearchGate](https://www.researchgate.net/publication/362095172_Water_use_and_management_practices_on_US_golf_courses)
+[^2]: [Green Energy Times](https://www.greenenergytimes.org/2020/06/37102/)
+[^3]: [Aces Golf](https://acesgolf.com/blackhawk-members-commit-to-major-solar-project/)
+[^4]: [GCSAA](https://www.gcsaa.org/docs/default-source/Environment/phase-2-energy-survey-full-report.pdf?sfvrsn=9cedeb3e_2)
+[^5]: [USGA](https://www.usga.org/content/dam/usga/images/course-care/water-resource-center/bmps-irrigating-golf-course-turf-rutgers-univ.pdf)
+[^6]: [Palmetto](https://palmetto.com/solar/what-is-solar-islanding-and-anti-islanding)
+[^7]: [California Air Resources Board](https://ww2.arb.ca.gov/news/carb-approves-updated-regulations-requiring-most-new-small-road-engines-be-zero-emission-2024)
+[^8]: [California Air Resources Board](https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2021/sore21/carb_sore_faq.pdf)
