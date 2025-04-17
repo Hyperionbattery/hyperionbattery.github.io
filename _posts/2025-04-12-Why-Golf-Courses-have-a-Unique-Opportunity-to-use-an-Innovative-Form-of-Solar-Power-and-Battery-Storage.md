@@ -6,30 +6,43 @@ date: 2025-04-12
 
 Last summer, I finally got it, why golf is so intoxicating and why every holiday my grandfather and uncles always made us kids watch seemingly endless tournaments that I found boring at the time. My friends and I recently turned 30 and, like many millennials before us, have been inevitably sucked onto the lush fairways and greens, or in my case, the roughs and fescue. As I am wading through the tall grasses looking for my ball, I think about the longevity of this great game that my grandfather played until he died at 94. Will I be able to do the same? Will these grasses remain so lush and green in the face of climate change and water scarcity? As a sustainability engineer, I worry about these things and consider what we can do to preserve this obsession shared by so many. The good news is that most golf courses are sitting on a goldmine of untapped potential to both reduce their electricity costs and ensure their future at the same time.
 
+
 Golf courses are often criticized for their high water consumption, fertilizer, and pesticide use. Modern sustainable agronomy practices have been able to noticeably reduce the intensity of their consumption of these key resources. Water use has fallen 25% per acre over the last 20 years.[^1] However, in the Southwest, water consumption actually increased, “which was probably a result of… reduced precipitation and increased heat in the Southwest region”.[^1] Hmm, sounds like the climate might be changing and causing this water stress? What an inconvenient truth.
 
+
 Most issues in sustainability come back to climate change. It exacerbates every other problem. So I spend a lot of time thinking about climate change mitigation, and since last summer, I have been thinking about how golf courses factor into those mitigation strategies. The most obvious strategy is to use renewable energy, specifically solar, to power the course. The Laurel Lane Country Club in Rhode Island has been 100% solar powered since 2016.[^2] They installed a large 146kW system, but not every course has the space for that. A popular option for golf courses of any size has been to install panels over the driving range and parking lots, which serves the dual benefit of keeping golfers’ vehicles cool as they play their round. The benefits are not only environmental but also financial. Many courses around the country are already slashing their utility bills, including Blackhawk Country Club in San Francisco, whose members “expect to save millions in electrical expenses over the next decade.”[^3] 
+
 
 ![Image of a solar canopy above driving range stalls](assets/img/Spreck Driving Range.jpg)
 Image Credit: Spreck Energy
 
+
 What may be less obvious is what typically demands the most energy at a golf course - you may think it is the clubhouse, or, if your course has electric carts, you may think their charging consumes the most. However, for most courses, their irrigation pumps are the largest single consumers of electricity.[^4] These irrigation systems are often used overnight and in the early morning hours so that the course is dry for golfers during the day, less water can be used since less of it will evaporate in the cooler nighttime temperature, and because grid energy is cheaper overnight.[^5] This strategy conserves energy and water, but it’s hard to power your pump with solar power when the sun is down. That’s where battery storage comes in.
+
 
 Coupling solar panels with battery storage allows the panels to power the clubhouse during the day and charge the batteries with excess energy. When the sun goes down, the batteries can then power the clubhouse and, light the course, and run the irrigation pump through the night. This further reduces the reliance on grid power, lowers electricity costs, and mitigates the course’s climate impact all at the same time. What’s more, electricity is often most expensive in the evening since demand is the highest, as the sun is going down and producing less solar power. Overnight, the electricity becomes cheaper again as demand decreases when people are asleep. This is another reason irrigation systems are used overnight. So even if the batteries don’t last until the sun comes up again, just getting the course through the evening hours is enough to eliminate most of the electricity costs.
 
+
 If the course ever experiences a grid power outage, the batteries can keep the energy flowing. Providing backup power often requires a battery system even during the day while the solar panels are producing energy, due to anti-islanding laws, although newer solar-only installations can also implement inverters with anti-islanding protection.[^6]
+
 
 This brings use to golf courses’ unique and yet currently untapped source of energy storage. Electric golf cart batteries. An 18-hole course typically owns 72 carts, four for each hole, but rarely needs all of them at the same time. Whether it’s a slow day, the off-season, or just overnight, the cart batteries are often sitting idle, underutilized. Electric golf cart batteries usually have capacities of at least 4kWh each, meaning that the course has a minimum of 288kWh of storage capacity in its golf cart batteries alone. That’s the amount stored in 20 typical home batteries, which would cost well over $100,000, but the course already owns (or leases) them! Cycling these batteries once per day would save over 100,000kWh per year, which is more than half of the typical annual electricity demand of a golf course. In an area where electricity is expensive, like Southern California, that equates to over $60,000 in annual savings, just by using the batteries the course already has in their carts. This considers not only avoided grid use, but also distributing demand to lower peaks, which lowers demand charges on commercial electricity bills. Courses could even take advantage of their batteries without installing solar panels to charge them. In states with Time-of-Use electricity pricing, this can still lead to significant cost savings. 
 
+
 Also in California, a new regulation on Small Off-Road Engines (SORE) means that all small off-road equipment like golf carts and lawn care equipment must be zero-emissions starting in model year 2026.[^7][^8] Gas carts can no longer be purchased starting next year, and electric carts will be the only option. This regulation has been in the pipeline for several years, and many courses have already made the switch.
+
 
 If golf courses are switching to electric carts and electric carts have so much spare battery capacity, isn’t it a no brainer to use the batteries to store solar power and lower costs? It sounds easy, so what’s the catch? Well, there’s currently no way to charge and discharge golf cart batteries bi-directionally to power external loads like the clubhouse or irrigation system. Vehicle-to-home and vehicle-to-grid standards are in their infancy for passenger electric vehicles, but do not include off-road vehicles like golf carts. 
 
+
 So what’s the solution? Swap the batteries into a rack that then acts like a normal grid-connected battery, charging and discharging bidirectionally. With a 30% federal tax incentive and additional state incentives, courses can get a huge discount on their cart batteries since they are now part of an energy storage system! Hyperion is building this system to allow golf courses, among others, to use the battery capacity in the equipment they already need for their operations to save money and ensure golf is not wiped out by climate change. Each golf cart will be fitted with four 1kWh battery packs roughly the size of an e-bike battery, which can easily be swapped by hand into the charging rack. Swappability also improves the repairability and replaceability of battery packs, which often wear out sooner than the rest of the golf cart. 
+
 
 These battery packs may also be used to power course maintenance equipment in the future, providing courses with complete energy independence. Other users of golf carts, lawn care equipment, and small vehicles like ebikes, ATVs, and more can also make use of this technology. Hyperion is looking for early partners, so if you or someone you know might be interested in this new technology, please let us know at hyperionbattery@gmail.com.
 
+
 Sources
+
 
 [^1]: https://www.researchgate.net/publication/362095172_Water_use_and_management_practices_on_US_golf_courses
 [^2]: https://www.greenenergytimes.org/2020/06/37102/ 
