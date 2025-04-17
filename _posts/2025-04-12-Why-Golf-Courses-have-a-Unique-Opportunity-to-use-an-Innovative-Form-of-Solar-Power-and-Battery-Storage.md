@@ -6,7 +6,7 @@ date: 2025-04-12
 
 Last summer, I finally got it, why golf is so intoxicating and why every holiday my grandfather and uncles always made us kids watch seemingly endless tournaments that I found boring at the time. My friends and I recently turned 30 and, like many millennials before us, have been inevitably sucked onto the lush fairways and greens, or in my case, the roughs and fescue. As I am wading through the tall grasses looking for my ball, I think about the longevity of this great game that my grandfather played until he died at 94. Will I be able to do the same? Will these grasses remain so lush and green in the face of climate change and water scarcity? As a sustainability engineer, I worry about these things and consider what we can do to preserve this obsession shared by so many. The good news is that most golf courses are sitting on a goldmine of untapped potential to both reduce their electricity costs and ensure their future at the same time.
 
-Golf courses are often criticized for their high water consumption, fertilizer, and pesticide use. Modern sustainable agronomy practices have been able to noticeably reduce the intensity of their consumption of these key resources. Water use has fallen 25% per acre over the last 20 years.[^1] However, in the Southwest, water consumption actually increased, “which was probably a result of… reduced precipitation and increased heat in the Southwest region”.[^1] Hmm, sounds like the climate might be changing and causing this water stress? What an inconvenient truth.
+Golf courses are often criticized for their high water consumption, fertilizer, and pesticide use. Modern sustainable agronomy practices have been able to noticeably reduce the intensity of their consumption of these key resources. Water use has fallen 25% per acre over the last 20 years.[^1][^,9] However, in the Southwest, water consumption actually increased, “which was probably a result of… reduced precipitation and increased heat in the Southwest region”.[^1] Hmm, sounds like the climate might be changing and causing this water stress? What an inconvenient truth.
 
 Most issues in sustainability come back to climate change. It exacerbates every other problem. So I spend a lot of time thinking about climate change mitigation, and since last summer, I have been thinking about how golf courses factor into those mitigation strategies. The most obvious strategy is to use renewable energy, specifically solar, to power the course. The Laurel Lane Country Club in Rhode Island has been 100% solar powered since 2016.[^2] They installed a large 146kW system, but not every course has the space for that. A popular option for golf courses of any size has been to install panels over the driving range and parking lots, which serves the dual benefit of keeping golfers’ vehicles cool as they play their round. The benefits are not only environmental but also financial. Many courses around the country are already slashing their utility bills, including Blackhawk Country Club in San Francisco, whose members “expect to save millions in electrical expenses over the next decade.”[^3] 
 
@@ -29,6 +29,8 @@ So what’s the solution? Swap the batteries into a rack that then acts like a n
 
 These battery packs may also be used to power course maintenance equipment in the future, providing courses with complete energy independence. Other users of golf carts, lawn care equipment, and small vehicles like ebikes, ATVs, and more can also make use of this technology. Hyperion is looking for early partners, so if you or someone you know might be interested in this new technology, please let us know at hyperionbattery@gmail.com.
 
+Sources
+
 [^1]: https://www.researchgate.net/publication/362095172_Water_use_and_management_practices_on_US_golf_courses
 [^2]: https://www.greenenergytimes.org/2020/06/37102/ 
 [^3]: https://acesgolf.com/blackhawk-members-commit-to-major-solar-project/ 
@@ -36,5 +38,5 @@ These battery packs may also be used to power course maintenance equipment in th
 [^5]: https://www.usga.org/content/dam/usga/images/course-care/water-resource-center/bmps-irrigating-golf-course-turf-rutgers-univ.pdf
 [^6]: https://palmetto.com/solar/what-is-solar-islanding-and-anti-islanding
 [^7]: https://ww2.arb.ca.gov/news/carb-approves-updated-regulations-requiring-most-new-small-road-engines-be-zero-emission-2024 
-[^8]: https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2021/sore21/carb_sore_faq.pdf 
-[^9]: https://www.gcsaa.org/docs/default-source/Environment/phase-2-nutrient-survey-full-report-update.pdf?sfvrsn=10a4173e_0
+[^,8]: https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2021/sore21/carb_sore_faq.pdf 
+[^,9]: https://www.gcsaa.org/docs/default-source/Environment/phase-2-nutrient-survey-full-report-update.pdf?sfvrsn=10a4173e_0
