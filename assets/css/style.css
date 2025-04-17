@@ -389,9 +389,15 @@
         .post p {
           font-size: 1rem;
           color: #333;
-          line-height: 1.6;
+          margin-bottom: 1.2em; /* or however much spacing you want */
+          line-height: 1.6;     /* optional: improves readability */
         }
-        
+
+        .post li {
+        font-size: 1rem;
+        color: #333;
+        }
+
         .read-more {
           display: inline-block;
           margin-top: 0.75rem;
