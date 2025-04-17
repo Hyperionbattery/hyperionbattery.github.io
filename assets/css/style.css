@@ -604,7 +604,8 @@
                 padding: 0.625rem; /*10px*/
                 border-radius: 0.3125rem; /*5px*/
                 width: 9.375rem; /*150px*/
-                text-align: center;
+                font-size: 0.9rem;
+                text-align: right;
             }
 
             .nav-links.active {
