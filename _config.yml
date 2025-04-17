@@ -1,5 +1,7 @@
 title: Hyperion
 description: Hyperion battery swapping for your home or building and electric equipment
 markdown: kramdown
+kramdown:
+  input: GFM
 theme: minima
 permalink: /blog/:year/:month/:day/:title/
