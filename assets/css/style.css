@@ -356,7 +356,11 @@
           gap: 1.5rem;
           margin-top: 1rem;
         }
-        
+
+        .blog-page {
+          background-color: #005F8D;
+        }
+
         .post {
           background-color: #d9f1ff;
           min-height: 100vh;
@@ -365,7 +369,6 @@
           box-shadow: 0 4px 8px rgba(0,0,0,0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
 
         .post:hover {
           transform: translateY(-4px);
