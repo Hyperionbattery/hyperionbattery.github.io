@@ -394,8 +394,15 @@
         }
 
         .post li {
-        font-size: 1rem;
-        color: #333;
+          font-size: 1rem;
+          color: #333;
+        }
+
+        .post img {
+          max-width: 50%;
+          height: auto;
+          display: block;
+          margin: 1em auto; /* optional: centers the image */
         }
 
         .read-more {
