@@ -410,6 +410,11 @@
           margin: 1em auto; /* optional: centers the image */
         }
 
+        .post .footnotes {
+          padding-left: 2rem;
+        }
+
+
         .read-more {
           display: inline-block;
           margin-top: 0.75rem;
