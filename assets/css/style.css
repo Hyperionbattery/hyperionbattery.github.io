@@ -359,12 +359,14 @@
         
         .post {
           background-color: #d9f1ff;
+          min-height: 100vh;
           padding: 1.5rem;
           border-radius: 0.75rem;
           box-shadow: 0 4px 8px rgba(0,0,0,0.08);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
+
         .post:hover {
           transform: translateY(-4px);
           box-shadow: 0 8px 16px rgba(0,0,0,0.1);
