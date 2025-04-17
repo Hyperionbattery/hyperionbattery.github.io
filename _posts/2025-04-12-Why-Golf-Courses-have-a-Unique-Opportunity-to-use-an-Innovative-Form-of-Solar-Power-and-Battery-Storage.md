@@ -29,12 +29,12 @@ So what’s the solution? Swap the batteries into a rack that then acts like a n
 
 These battery packs may also be used to power course maintenance equipment in the future, providing courses with complete energy independence. Other users of golf carts, lawn care equipment, and small vehicles like ebikes, ATVs, and more can also make use of this technology. Hyperion is looking for early partners, so if you or someone you know might be interested in this new technology, please let us know at hyperionbattery@gmail.com.
 
-[^1] https://www.researchgate.net/publication/362095172_Water_use_and_management_practices_on_US_golf_courses
-[^2] https://www.greenenergytimes.org/2020/06/37102/ 
-[^3] https://acesgolf.com/blackhawk-members-commit-to-major-solar-project/ 
-[^4] https://www.gcsaa.org/docs/default-source/Environment/phase-2-energy-survey-full-report.pdf?sfvrsn=9cedeb3e_2
-[^5] https://www.usga.org/content/dam/usga/images/course-care/water-resource-center/bmps-irrigating-golf-course-turf-rutgers-univ.pdf
-[^6] https://palmetto.com/solar/what-is-solar-islanding-and-anti-islanding
-[^7] https://ww2.arb.ca.gov/news/carb-approves-updated-regulations-requiring-most-new-small-road-engines-be-zero-emission-2024 
-[^8] https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2021/sore21/carb_sore_faq.pdf 
-[^9] https://www.gcsaa.org/docs/default-source/Environment/phase-2-nutrient-survey-full-report-update.pdf?sfvrsn=10a4173e_0
+[^1]: https://www.researchgate.net/publication/362095172_Water_use_and_management_practices_on_US_golf_courses
+[^2]: https://www.greenenergytimes.org/2020/06/37102/ 
+[^3]: https://acesgolf.com/blackhawk-members-commit-to-major-solar-project/ 
+[^4]: https://www.gcsaa.org/docs/default-source/Environment/phase-2-energy-survey-full-report.pdf?sfvrsn=9cedeb3e_2
+[^5]: https://www.usga.org/content/dam/usga/images/course-care/water-resource-center/bmps-irrigating-golf-course-turf-rutgers-univ.pdf
+[^6]: https://palmetto.com/solar/what-is-solar-islanding-and-anti-islanding
+[^7]: https://ww2.arb.ca.gov/news/carb-approves-updated-regulations-requiring-most-new-small-road-engines-be-zero-emission-2024 
+[^8]: https://ww2.arb.ca.gov/sites/default/files/barcu/regact/2021/sore21/carb_sore_faq.pdf 
+[^9]: https://www.gcsaa.org/docs/default-source/Environment/phase-2-nutrient-survey-full-report-update.pdf?sfvrsn=10a4173e_0
