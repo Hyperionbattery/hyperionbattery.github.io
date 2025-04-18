@@ -4,7 +4,6 @@ title: Home
 ---
 
     <!-- Navigation Bar -->
-
     <div class="navbar">
         <div class="logo">
             <a href="#Home"><img src="Hyperionlogo blue background.png" alt="Hyperion's Logo"></a> <!-- Display logo file in nav bar -->
@@ -61,6 +60,18 @@ title: Home
                 </model-viewer>
             </div>
             <!--<div class="image"><img src="Battery Module.PNG" alt="Hyperion's universal battery pack"></div>-->
+            <video
+            id="scrollVideo"
+            muted
+            loop
+            playsinline
+            preload="auto"
+            width="100%"
+            >
+            <source src="{{ '/assets/videos/Hyperion Animation.mp4' | relative_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        
     </div>
 
     <div id="Demo" class="section video-section">
