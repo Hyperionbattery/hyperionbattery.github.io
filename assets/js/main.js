@@ -29,6 +29,31 @@
         }
     });
 
+        // JavaScript for autoplay video
+        document.addEventListener("DOMContentLoaded", function () {
+          const video = document.getElementById("scrollVideo");
+        
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  video.play();
+                } else {
+                  video.pause();
+                }
+              });
+            },
+            {
+              threshold: 0.5,
+            }
+          );
+        
+          if (video) {
+            observer.observe(video);
+          }
+        });
+
+
     // JavaScript for slideshow gallery
     document.addEventListener("DOMContentLoaded", function () {
         let index = 0;
