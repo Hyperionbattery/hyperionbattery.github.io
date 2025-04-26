@@ -213,25 +213,26 @@
             width: 90%;
             max-width: 1200px;
             margin: 2.5rem auto;
+            text-align: center; /* Center contents */
         }
 
         .video-container iframe {
-            max-width: 90%;
-            height: auto;
+            width: 100%;
+            aspect-ratio: 16 / 9;
             max-height: 75vh;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            display: block;
+            display: inline-block;
             object-fit: contain;
         }
 
         .video-container video {
-            max-width: 90%;
-            height: auto;
+            width: 100%;
+            aspect-ratio: 16 / 9;
             max-height: 75vh;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            display: block;
+            display: inline-block;
             object-fit: contain;
         }
 
