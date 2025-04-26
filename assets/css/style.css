@@ -216,16 +216,6 @@
             text-align: center; /* Center contents */
         }
 
-        .video-container iframe {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            max-height: 75vh;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            object-fit: contain;
-        }
-
         .video-container video {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -236,6 +226,22 @@
             object-fit: contain;
         }
 
+        .iframe-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2.5rem auto;
+            text-align: center; /* Center contents */
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            max-height: 75vh;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            object-fit: contain;
+        }
 
 /*        
         .video-container video {
