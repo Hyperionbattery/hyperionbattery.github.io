@@ -235,8 +235,7 @@
         }
 
         .video-container video {
-            width: 100%;
-            max-width: 100%;
+            max-width: 90%;
             height: auto;
             max-height: 75vh;
             border-radius: 15px;
