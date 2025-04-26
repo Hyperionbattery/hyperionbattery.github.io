@@ -210,7 +210,7 @@
 */
 
         .video-container {
-            width: 90%;
+            /*width: 90%;*/
             max-width: 1200px;
             margin: 2.5rem auto;
             text-align: center; /* Center contents */
