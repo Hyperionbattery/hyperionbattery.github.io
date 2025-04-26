@@ -209,13 +209,13 @@
 /*        }
 */
         .video-container {
-            width: 90%;
+            /*width: 90%;*/
             max-width: 1200px;
             margin: 2.5rem auto;
         }
         
         .video-container iframe {
-            width: 100%;
+            /*width: 100%;*/
             aspect-ratio: 16 / 9;
             max-height: 70vh;
             border-radius: 15px;
@@ -225,7 +225,7 @@
         }
 
         .video-container video {
-            width: 100%;
+            /*width: 100%;*/
             max-width: 100%;
             height: auto;
             max-height: 80vh;
