@@ -166,17 +166,17 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 100vh; /* Ensures full height */
+            min-height: 100vh; /* Ensures full height */
             position: relative;
             background: linear-gradient(135deg, #005F8D, #D9F1FF); /* Adds a gradient effect */
         }
 
-        .video-container {
+/*        .video-container {
             position: relative;
             width: 90%;
             max-width: 1200px;
             padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-            height: 0;
+/*            height: 0;
             overflow: hidden;
             margin: 2.5rem auto;
         }
@@ -193,20 +193,43 @@
         }
 */
 
-        .video-container video {
+/*        .video-container video {
           width: 100%;
           height: auto;
           display: block;
           border-radius: 15px;
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gives it depth */
-        }
+/*        }
 
         .video-container iframe {
             width: 100%;
             height: 100%;
             border-radius: 15px; /* Adds a modern, rounded-corner effect */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gives it depth */
+/*            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gives it depth */
+/*        }
+*/
+        .video-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2.5rem auto;
         }
+        
+        .video-container iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .video-container video {
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
 
         .gallery {
             display: flex;
@@ -518,13 +541,26 @@
                 height: auto;
                 padding: 0; /* Reduce padding */
             }
-
+/*
             .video-container iframe {
                 width: 100%;
                 height: 56.25vw; /* Maintain 16:9 aspect ratio */
-                max-height: 60vh;
+ /*               max-height: 60vh;
                 border-radius: 10px;
             }
+*/
+                .video-container iframe {
+                    aspect-ratio: 16 / 9;
+                    height: auto;
+                    max-height: 60vh;
+                }
+                
+                .video-container video {
+                    width: 100%;
+                    height: auto;
+                    max-height: 60vh;
+                }
+
             
             .text, .gallery {
                 width: 100%;
