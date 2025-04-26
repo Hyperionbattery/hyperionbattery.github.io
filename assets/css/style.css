@@ -217,9 +217,7 @@
         }
 
         .video-container video {
-            width: auto;
-            max-width: 100%;
-            height: auto;
+            width: 100%;
             aspect-ratio: 16 / 9;
             max-height: 75vh;
             border-radius: 15px;
@@ -236,9 +234,7 @@
         }
 
         .iframe-container iframe {
-            width: auto;
-            max-width: 100%;
-            height: auto;
+            width: 100%;
             aspect-ratio: 16 / 9;
             max-height: 75vh;
             border-radius: 15px;
