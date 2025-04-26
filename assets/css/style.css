@@ -216,8 +216,8 @@
         }
 
         .video-container iframe {
-            max-width: 100%;
-            aspect-ratio: 16 / 9;
+            max-width: 90%;
+            height: auto;
             max-height: 75vh;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
