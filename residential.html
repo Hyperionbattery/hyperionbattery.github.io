@@ -1,0 +1,159 @@
+---
+layout: default
+title: For Your Home
+permalink: /residential/
+audience: residential
+description: Hyperion swappable battery packs power your home, lawn equipment, ebikes, and golf cart with the same batteries.
+nav_sections:
+  - title: Overview
+    url: "#Home"
+  - title: About
+    url: "#About"
+  - title: Demo
+    url: "#Demo"
+  - title: Gallery
+    url: "#Gallery"
+  - title: Benefits
+    url: "#Benefits"
+  - title: Team
+    url: "#Team"
+  - title: Mailing List
+    url: "#Mailing List"
+  - title: Blog
+    url: "#Blog"
+---
+
+{% include nav.html %}
+
+    <!-- Page Sections -->
+    <div id="Home" class="section">
+        <div class="text">
+            <h1>Swappable batteries to power your home and equipment</h1>
+            <br>
+            <br>
+            <p>Scroll to learn more or <a href="#Mailing List" class="cta-button">Join Our Mailing List</a></p>
+
+        </div>
+        <div class="image"><img src="{{ '/House with golf cart.jpg' | relative_url }}" alt="A house with solar panels, a battery energy storage system, and an electric golf cart in the garage"></div>
+    </div>
+
+    <div id="About" class="section video-section">
+        <div class="text">
+            <h2>You can now power your home and equipment with the same battery packs.</h2>
+            <p><br></p>
+            <p>Hyperion is creating battery packs that can be used to backup your home or building and also power your electric equipment such as golf carts, lawn equipment, bikes, scooters, and much more.
+            The packs will be swappable between all supported equipment and charge in a wall-mounted rack in your home or business.
+            It will be the most flexible and modular BESS available.</p>
+            <p><br></p>
+            <p>You can save money on your electricity bills, forget about grid outages, and achieve energy independence.
+            Battery swapping eliminates charging downtime and uses DC solar power more efficiently.
+            You can also buy fewer batteries since you won't need to buy discrete batteries for your home and all your equipment.</p>
+        </div>
+
+        <div class="video-container">
+            <video
+                id="scrollVideo"
+                muted
+                loop
+                playsinline
+                preload="auto"
+                >
+                <source src="{{ 'Hyperion Animation.mp4' | relative_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+        </div>
+    </div>
+
+    <div id="Demo" class="section video-section">
+        <div class="text">
+            <h2>Watch Our Prototype Demo</h2>
+            <p>See our prototype in action in this quick demo video.</p>
+        </div>
+        <div class="iframe-container">
+            <iframe
+                    src="https://www.youtube.com/embed/A2FkaSyfDF8"
+                    title="Hyperion Introduction and Prototype Battery Swapping Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+
+    <div id="Gallery" class="section">
+        <div class="text">
+            <h2>Prototype Gallery</h2>
+            <br>
+            <p>We have built a prototype from off-the-shelf bike batteries and other hardware to demonstrate the concept of swapping batteries from powering a shed, to an ebike, to a golf cart, and recharging with solar panels.
+                The prototype uses 4 battery packs which slide in and out of the rack horizontally.
+                <br>
+                <br>
+                Do not try this at home. It looks simple, but requires a custom energy management system to prevent the batteries from discharging into each other and causing rapid overheating.
+            </p>
+        </div>
+            <div class="gallery">
+                <div class="gallery-wrapper">
+                    <button class="prev">&#10094;</button>
+                    <div class="gallery-slides">
+                        <div class="gallery-item active">
+                            <img src="{{ '/prototype_topview.JPG' | relative_url }}" class="gallery-slide" alt="Hyperion's battery swapping prototype including a view of the solar panels on the shed roof">
+                            <p class="gallery-caption">Hyperion's battery swapping prototype with a view of the solar panels on the shed roof</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="{{ '/Battery_insertion.png' | relative_url }}" class="gallery-slide" alt="A battery pack being inserted into the Hyperion swapping rack">
+                            <p class="gallery-caption">A battery pack being inserted into the Hyperion swapping rack</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="{{ '/bike insertion.png' | relative_url }}" class="gallery-slide" alt="Hyperion's battery swapping into an ebike">
+                            <p class="gallery-caption">Hyperion's battery pack swapping into an ebike</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="{{ '/batteries in golf cart.png' | relative_url }}" class="gallery-slide" alt="Prototype batteries mounted in a golf cart under the seat">
+                            <p class="gallery-caption">Prototype batteries mounted in a golf cart under the seat</p>
+                        </div>
+                    </div>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+    </div>
+
+
+    <div id="Benefits" class="section">
+        <div class="text">
+            <h2>What is your lawnmower battery doing when you aren't mowing your lawn? </h2>
+            <p></p>
+            <h2>Nothing... put it to work.</h2>
+            <br>
+            <ul>
+                <li>Power your house, transportation, and tools with the same batteries</li>
+                <li>Gain independence from the grid and never worry about outages again</li>
+                <li>Save money on your electricity bill</li>
+                <li>Swap packs in seconds, don't wait for recharging</li>
+                <li>Use Hyperion batteries to power tools you already own from other brands</li>
+                <li>Buy your tools without their own batteries and save</li>
+                <li>Use your solar power more efficiently</li>
+            </ul>
+        </div>
+        <div class="image"><img src="{{ '/Home swapping station_perspective_transparent.png' | relative_url }}" alt="Hyperion's home charging rack and swapping system"></div>
+    </div>
+
+
+    <div id="Team" class="section">
+        <div class="text">
+            <h2>Meet the Founder</h2>
+            <p><br>
+            CEO Matt’s career aspiration is to make as much impact on the climate crisis and energy transition as possible. He has an MS and PhD in sustainable engineering, with a concentration in energy systems.
+            He is confident battery storage will unlock the true potentail of renewable energy.</p></div>
+        <div class="image"><img src="{{ '/Matt Headshot.jpg' | relative_url }}" alt="Image of the Hyperion cofounder, Matt Ashcroft">
+            <p>Matt Ashcroft, CEO</p>
+        </div>
+    </div>
+
+{% include mailing-list.html %}
+
+{% include blog-teaser.html %}
+
+{% include footer.html %}
+
+{% include privacy-modal.html %}

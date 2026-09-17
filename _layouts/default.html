@@ -12,17 +12,18 @@
   gtag('config', 'G-3Y75KRXVT7');
 </script>
     <meta charset="UTF-8">
-    <meta name="description" content="Hyperion battery swapping for your home and electric equipment">
-    <meta name="keywords" content="battery energy storage, battery swapping, solar battery, home batteries, renewable energy storage, residential battery, BESS, Power backup, store extra solar">
+    {% assign page_description = page.description | default: "Hyperion battery swapping for your home, your equipment, and your business" %}
+    <meta name="description" content="{{ page_description }}">
+    <meta name="keywords" content="{{ page.keywords | default: 'battery energy storage, battery swapping, solar battery, home batteries, renewable energy storage, residential battery, BESS, Power backup, store extra solar' }}">
     <meta name="author" content="Matthew Ashcroft">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Hyperion">
-    <meta property="og:description" content="Hyperion battery swapping for your home and electric equipment">
+    <meta property="og:title" content="Hyperion{% if page.title %} | {{ page.title }}{% endif %}">
+    <meta property="og:description" content="{{ page_description }}">
     <meta property="og:image" content="https://www.hyperionbattery.com/Home%20swapping%20station_perspective_transparent.png">
-    <meta property="og:url" content="https://hyperionbattery.com">
+    <meta property="og:url" content="https://www.hyperionbattery.com{{ page.url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hyperion</title>
+    <title>Hyperion{% if page.title %} | {{ page.title }}{% endif %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">

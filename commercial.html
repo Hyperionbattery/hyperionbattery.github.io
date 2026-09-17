@@ -1,0 +1,152 @@
+---
+layout: default
+title: For Golf Courses
+permalink: /commercial/
+audience: commercial
+description: Turn your golf cart fleet into a battery that cuts your course's electricity bill. Hyperion swappable packs charge when power is cheap and power the course when it is expensive.
+keywords: golf course energy savings, golf cart battery storage, energy arbitrage, peak shaving, demand charges, vehicle to grid golf carts, commercial battery storage
+nav_sections:
+  - title: Overview
+    url: "#Home"
+  - title: How It Works
+    url: "#HowItWorks"
+  - title: Savings
+    url: "#Savings"
+  - title: Fleet
+    url: "#Fleet"
+  - title: Demo
+    url: "#Demo"
+  - title: Get Started
+    url: "#Mailing List"
+---
+
+{% include nav.html %}
+
+    <div id="Home" class="section">
+        <div class="text">
+            <h1>Your cart fleet is a battery. Put it to work on your power bill.</h1>
+            <br>
+            <p>Hyperion swappable battery packs charge your golf carts when electricity is cheap and send power back to the clubhouse, pump house, and maintenance shop when electricity is expensive.
+            Same carts, same rounds, lower bill.</p>
+            <br>
+            <p><a href="#Mailing List" class="cta-button">Get a Savings Estimate</a></p>
+        </div>
+        <div class="image"><img src="{{ '/batteries in golf cart.png' | relative_url }}" alt="Hyperion swappable battery packs mounted under the seat of a golf cart"></div>
+    </div>
+
+    <div id="HowItWorks" class="section">
+        <div class="text">
+            <h2>How it works</h2>
+            <br>
+            <ol class="steps">
+                <li><strong>Charge off-peak.</strong> Overnight and midday, when your utility's rates are at their lowest, the swapping racks charge every pack in the fleet.</li>
+                <li><strong>Play all day.</strong> Carts run on charged packs. When a pack runs low, staff swap in a fresh one in seconds instead of parking the cart on a charger.</li>
+                <li><strong>Discharge on-peak.</strong> During the expensive late-afternoon peak, the racks stop drawing power and feed the packs' stored energy back into your course's electrical load.</li>
+                <li><strong>Repeat daily.</strong> The system runs on your utility's rate schedule automatically, every day of the season.</li>
+            </ol>
+        </div>
+        <div class="image">
+            <!-- Illustrative time-of-use price curve with charge / discharge windows -->
+            <svg class="tou-chart" viewBox="0 0 640 380" role="img" aria-labelledby="touTitle touDesc">
+                <title id="touTitle">Daily electricity price curve with Hyperion charge and discharge windows</title>
+                <desc id="touDesc">Illustration of a time-of-use rate: the packs charge during cheap overnight and midday hours and discharge during the expensive late afternoon peak.</desc>
+
+                <!-- charge / discharge bands -->
+                <rect x="60" y="40" width="120" height="260" fill="#8ed1a0" opacity="0.35"></rect>
+                <rect x="260" y="40" width="100" height="260" fill="#8ed1a0" opacity="0.35"></rect>
+                <rect x="400" y="40" width="130" height="260" fill="#f7c600" opacity="0.45"></rect>
+
+                <!-- axes -->
+                <line x1="60" y1="300" x2="600" y2="300" stroke="currentColor" stroke-width="2"></line>
+                <line x1="60" y1="40" x2="60" y2="300" stroke="currentColor" stroke-width="2"></line>
+
+                <!-- price curve -->
+                <polyline points="60,250 140,255 220,235 300,220 380,170 440,80 500,90 540,160 600,230"
+                          fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></polyline>
+
+                <!-- labels -->
+                <text x="120" y="330" text-anchor="middle" font-size="20" fill="currentColor">Overnight</text>
+                <text x="310" y="330" text-anchor="middle" font-size="20" fill="currentColor">Midday</text>
+                <text x="465" y="330" text-anchor="middle" font-size="20" fill="currentColor">4&ndash;9pm</text>
+                <text x="120" y="70" text-anchor="middle" font-size="19" font-weight="bold" fill="currentColor">CHARGE</text>
+                <text x="310" y="70" text-anchor="middle" font-size="19" font-weight="bold" fill="currentColor">CHARGE</text>
+                <text x="465" y="70" text-anchor="middle" font-size="19" font-weight="bold" fill="currentColor">DISCHARGE</text>
+                <text x="30" y="170" text-anchor="middle" font-size="20" fill="currentColor" transform="rotate(-90 30 170)">Price of power</text>
+                <text x="330" y="368" text-anchor="middle" font-size="16" fill="currentColor">Illustrative time-of-use rate</text>
+            </svg>
+        </div>
+    </div>
+
+    <div id="Savings" class="section">
+        <div class="text">
+            <h2>Where the savings come from</h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <h3>Energy arbitrage</h3>
+                    <p>Every kilowatt-hour your course uses during peak hours can instead be bought overnight at the off-peak rate. You pay the cheap price for power you use at the expensive time.</p>
+                </div>
+                <div class="card">
+                    <h3>Peak shaving and demand charges</h3>
+                    <p>Commercial bills are driven by your highest 15-minute demand spike, not just total usage. Discharging the fleet during those spikes &mdash; and never charging carts into them &mdash; pulls your peak down and takes the demand charge with it.</p>
+                </div>
+                <div class="card">
+                    <h3>More value from your solar</h3>
+                    <p>Already have panels, or considering them? Store the midday surplus in the cart packs instead of exporting it for a low export credit, then use it after the sun goes down.</p>
+                </div>
+                <div class="card">
+                    <h3>Backup power for the course</h3>
+                    <p>When the grid goes down, the same packs keep the clubhouse, POS, irrigation, and refrigeration running so play and food service continue.</p>
+                </div>
+                <div class="card">
+                    <h3>No new real estate</h3>
+                    <p>The storage is the fleet you already buy. No separate container of batteries, no ground lease, no dedicated pad next to the maintenance building.</p>
+                </div>
+                <div class="card">
+                    <h3>No cart downtime</h3>
+                    <p>Swapping takes seconds, so a pack that spent the afternoon powering the clubhouse never keeps a cart off the first tee.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Fleet" class="section">
+        <div class="text">
+            <h2>Built around how a course actually runs</h2>
+            <br>
+            <ul>
+                <li>Packs swap between carts, utility vehicles, and the charging rack &mdash; one battery standard across the property</li>
+                <li>Racks mount in the cart barn, so charging and discharging happen where the fleet already parks</li>
+                <li>The energy management system decides when to charge and discharge from your utility's rate schedule</li>
+                <li>Fleet packs stay reserved for play first; only surplus capacity is sold back into the course load</li>
+                <li>Scales a pack at a time as you replace or expand the fleet, instead of one large capital purchase</li>
+            </ul>
+            <br>
+            <p><a href="#Mailing List" class="cta-button">Talk to Us About Your Course</a></p>
+        </div>
+        <div class="image"><img src="{{ '/Home swapping station_perspective_transparent.png' | relative_url }}" alt="Hyperion's swapping and charging rack holding multiple battery packs"></div>
+    </div>
+
+    <div id="Demo" class="section video-section">
+        <div class="text">
+            <h2>See the prototype</h2>
+            <p>We have built a working prototype that swaps packs between a building, an ebike, and a golf cart, recharging from solar.</p>
+        </div>
+        <div class="iframe-container">
+            <iframe
+                    src="https://www.youtube.com/embed/A2FkaSyfDF8"
+                    title="Hyperion Introduction and Prototype Battery Swapping Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+{% include mailing-list.html heading="Find out what your course could save" blurb="Leave your email and we will get in touch to walk through your utility rate, your fleet size, and what Hyperion could take off your electricity bill." button="Get in Touch" %}
+
+{% include blog-teaser.html %}
+
+{% include footer.html %}
+
+{% include privacy-modal.html %}
