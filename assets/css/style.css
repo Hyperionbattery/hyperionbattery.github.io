@@ -602,7 +602,8 @@
             padding: 1.25rem;
         }
 
-        .section:nth-of-type(even) .cards .card {
+        .section:nth-of-type(even) .cards .card,
+        .section.light .cards .card {
             background: rgba(0, 95, 141, 0.08);
             border-color: rgba(0, 95, 141, 0.25);
         }
@@ -617,8 +618,8 @@
             line-height: 1.5;
         }
 
-        /* Savings section is full width, no side image */
-        #Savings .text {
+        /* Sections with no side image */
+        .section.full-width .text {
             width: 100%;
         }
 
