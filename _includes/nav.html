@@ -1,1 +1,20 @@
-placeholder
+<!-- Navigation Bar. Pages pass their in-page section links via page.nav_sections -->
+<div class="navbar">
+    <div class="logo">
+        <a href="{{ '/' | relative_url }}"><img src="{{ '/Hyperionlogo blue background.png' | relative_url }}" alt="Hyperion's Logo"></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links">
+        {% for item in page.nav_sections %}
+            <a href="{{ item.url }}" onclick="closeMenu()">{{ item.title }}</a>
+        {% endfor %}
+        <span class="audience-switch">
+            <a href="{{ '/residential/' | relative_url }}" class="audience-link {% if page.audience == 'residential' %}active{% endif %}" onclick="closeMenu()">Your Home</a>
+            <a href="{{ '/commercial/' | relative_url }}" class="audience-link {% if page.audience == 'commercial' %}active{% endif %}" onclick="closeMenu()">Golf Courses</a>
+        </span>
+    </div>
+</div>

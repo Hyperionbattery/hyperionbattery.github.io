@@ -1,0 +1,174 @@
+---
+layout: default
+title: For Golf Courses
+permalink: /commercial/
+audience: commercial
+description: Hyperion's smart bidirectional chargers turn the batteries already in your golf cart fleet into one energy storage system. A course with 70-80 electric carts could save up to $40,000 a year.
+keywords: golf course energy savings, golf cart bidirectional charging, V2G golf carts, energy arbitrage, peak shaving, demand charges, commercial battery storage, fleet energy storage
+nav_sections:
+  - title: Overview
+    url: "#Home"
+  - title: Savings
+    url: "#Savings"
+  - title: How It Works
+    url: "#HowItWorks"
+  - title: Why It Pays
+    url: "#WhyItPays"
+  - title: Fleet
+    url: "#Fleet"
+  - title: Get Started
+    url: "#Mailing List"
+---
+
+{% include nav.html %}
+
+    <div id="Home" class="section">
+        <div class="text">
+            <h1>Your cart fleet is already a battery. Ours is the charger that uses it.</h1>
+            <br>
+            <p>Keep your carts. Keep their batteries. Hyperion's smart bidirectional chargers connect every cart in your fleet into a single energy storage system that charges when electricity is cheap and powers the course when electricity is expensive.</p>
+            <br>
+            <p><a href="#Mailing List" class="cta-button">Get a Savings Estimate</a></p>
+        </div>
+        <div class="image"><img src="{{ '/batteries in golf cart.png' | relative_url }}" alt="Lithium batteries under the seat of an electric golf cart"></div>
+    </div>
+
+    <div id="Savings" class="section full-width">
+        <div class="text">
+            <h2>A course with 70&ndash;80 electric carts could save up to $40,000 a year</h2>
+            <br>
+            <p>Not by buying batteries. By using the ones already parked in your cart barn.</p>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <h3>No new batteries</h3>
+                    <p>Your fleet's existing packs are the storage. Nothing to buy, nothing to site, no container of batteries behind the maintenance building.</p>
+                </div>
+                <div class="card">
+                    <h3>No change to operations</h3>
+                    <p>Carts plug in at the end of the round the same way they do today. The chargers handle the rest.</p>
+                </div>
+                <div class="card">
+                    <h3>Carts charged by first tee</h3>
+                    <p>Play comes first. The system always keeps enough charge in the fleet for tomorrow's rounds, and only uses the surplus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="HowItWorks" class="section">
+        <div class="text">
+            <h2>How it works</h2>
+            <br>
+            <ol class="steps">
+                <li><strong>Swap the chargers, not the carts.</strong> Hyperion bidirectional chargers replace the chargers in your cart barn. Your carts and their stock batteries stay exactly as they are.</li>
+                <li><strong>Charge when power is cheap.</strong> Overnight and midday, when your utility's rates are lowest, the system charges the whole fleet.</li>
+                <li><strong>Discharge when power is expensive.</strong> During the late-afternoon peak, the chargers run in reverse and feed energy from the cart batteries back into the clubhouse, pump house, and maintenance shop &mdash; and never draw from the grid during those hours.</li>
+                <li><strong>Every cart, one system.</strong> Hyperion's software coordinates all the chargers so 70&ndash;80 carts act as a single energy storage system sized in the hundreds of kilowatt-hours.</li>
+            </ol>
+        </div>
+        <div class="image">
+            <!-- Illustrative time-of-use price curve with charge / discharge windows -->
+            <svg class="tou-chart" viewBox="0 0 640 380" role="img" aria-labelledby="touTitle touDesc">
+                <title id="touTitle">Daily electricity price curve with fleet charge and discharge windows</title>
+                <desc id="touDesc">Illustration of a time-of-use rate: the cart fleet charges during cheap overnight and midday hours and discharges into the course during the expensive late afternoon peak.</desc>
+
+                <!-- charge / discharge bands -->
+                <rect x="60" y="40" width="120" height="260" fill="#8ed1a0" opacity="0.35"></rect>
+                <rect x="260" y="40" width="100" height="260" fill="#8ed1a0" opacity="0.35"></rect>
+                <rect x="400" y="40" width="130" height="260" fill="#f7c600" opacity="0.45"></rect>
+
+                <!-- axes -->
+                <line x1="60" y1="300" x2="600" y2="300" stroke="currentColor" stroke-width="2"></line>
+                <line x1="60" y1="40" x2="60" y2="300" stroke="currentColor" stroke-width="2"></line>
+
+                <!-- price curve -->
+                <polyline points="60,250 140,255 220,235 300,220 380,170 440,80 500,90 540,160 600,230"
+                          fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></polyline>
+
+                <!-- labels -->
+                <text x="120" y="330" text-anchor="middle" font-size="20" fill="currentColor">Overnight</text>
+                <text x="310" y="330" text-anchor="middle" font-size="20" fill="currentColor">Midday</text>
+                <text x="465" y="330" text-anchor="middle" font-size="20" fill="currentColor">4&ndash;9pm</text>
+                <text x="120" y="70" text-anchor="middle" font-size="19" font-weight="bold" fill="currentColor">CHARGE</text>
+                <text x="310" y="70" text-anchor="middle" font-size="19" font-weight="bold" fill="currentColor">CHARGE</text>
+                <text x="465" y="70" text-anchor="middle" font-size="19" font-weight="bold" fill="currentColor">DISCHARGE</text>
+                <text x="30" y="170" text-anchor="middle" font-size="20" fill="currentColor" transform="rotate(-90 30 170)">Price of power</text>
+                <text x="330" y="368" text-anchor="middle" font-size="16" fill="currentColor">Illustrative time-of-use rate</text>
+            </svg>
+        </div>
+    </div>
+
+    <div id="WhyItPays" class="section full-width">
+        <div class="text">
+            <h2>Where the savings come from</h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <h3>Energy arbitrage</h3>
+                    <p>Power your course uses during expensive peak hours is bought overnight at the off-peak rate instead. Same kilowatt-hours, cheaper price.</p>
+                </div>
+                <div class="card">
+                    <h3>Peak shaving and demand charges</h3>
+                    <p>Commercial bills are driven by your single highest demand spike, not just total usage. Discharging the fleet into those spikes &mdash; and never charging carts during them &mdash; pulls your peak down and takes the demand charge with it.</p>
+                </div>
+                <div class="card">
+                    <h3>Cart charging moved off-peak</h3>
+                    <p>Charging a fleet of carts is a large load. Today it often lands in peak hours. Hyperion shifts all of it to the cheapest hours of the day.</p>
+                </div>
+                <div class="card">
+                    <h3>More value from your solar</h3>
+                    <p>Already have panels, or considering them? Store the midday surplus in the cart batteries instead of exporting it for a low credit, then use it after the sun goes down.</p>
+                </div>
+                <div class="card">
+                    <h3>Backup power for the course</h3>
+                    <p>When the grid goes down, the fleet keeps the clubhouse, POS, irrigation, and refrigeration running so play and food service continue.</p>
+                </div>
+                <div class="card">
+                    <h3>No storage capital</h3>
+                    <p>Standalone commercial battery systems cost six figures. You already bought your batteries &mdash; this is the equipment that finally puts them to work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Fleet" class="section">
+        <div class="text">
+            <h2>Built around how a course actually runs</h2>
+            <br>
+            <ul>
+                <li>Works with the lithium carts you already own &mdash; no new batteries, no cart modifications</li>
+                <li>Installs in the cart barn in place of your existing chargers</li>
+                <li>Charging and discharging follow your utility's rate schedule automatically, with no daily staff involvement</li>
+                <li>Play always comes first: the system reserves the charge your rounds need and only trades the surplus</li>
+                <li>Charge and discharge rates are managed to stay within your carts' battery limits</li>
+                <li>Scales with your fleet &mdash; add chargers as you add or replace carts</li>
+            </ul>
+            <br>
+            <p><a href="#Mailing List" class="cta-button">Talk to Us About Your Course</a></p>
+        </div>
+        <div class="image"><img src="{{ '/House with golf cart.jpg' | relative_url }}" alt="An electric golf cart parked in a garage alongside solar panels and a battery energy storage system"></div>
+    </div>
+
+    <div id="About" class="section">
+        <div class="text">
+            <h2>Who we are</h2>
+            <br>
+            <p>Hyperion builds battery systems that get more out of batteries people already own. Alongside the bidirectional charging system for cart fleets, we develop swappable battery packs for homes and equipment, and we have built and demonstrated a working prototype of that system.</p>
+            <br>
+            <p>CEO Matt Ashcroft holds an MS and PhD in sustainable engineering with a concentration in energy systems, and has spent his career on the energy transition.</p>
+            <br>
+            <p><a href="{{ '/residential/' | relative_url }}" class="cta-button">See the Residential Side</a></p>
+        </div>
+        <div class="image"><img src="{{ '/Matt Headshot.jpg' | relative_url }}" alt="Matt Ashcroft, Hyperion's CEO">
+            <p>Matt Ashcroft, CEO</p>
+        </div>
+    </div>
+
+{% include mailing-list.html heading="Find out what your course could save" blurb="Leave your email and we will get in touch to walk through your utility rate, your fleet size, and what Hyperion could take off your electricity bill." button="Get in Touch" %}
+
+{% include blog-teaser.html %}
+
+{% include footer.html %}
+
+{% include privacy-modal.html %}
