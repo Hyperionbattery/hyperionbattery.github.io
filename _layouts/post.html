@@ -1,79 +1,15 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+body_class: blog-page
+---
 
-<head>    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y75KRXVT7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3Y75KRXVT7');
-</script>
-    <meta charset="UTF-8">
-    <meta name="description" content="Hyperion battery swapping for your home and electric equipment">
-    <meta name="keywords" content="battery energy storage, battery swapping, solar battery, home batteries, renewable energy storage, residential battery, BESS, Power backup, store extra solar">
-    <meta name="author" content="Matthew Ashcroft">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Hyperion">
-    <meta property="og:description" content="Hyperion battery swapping for your home and electric equipment">
-    <meta property="og:image" content="https://www.hyperionbattery.com/Home%20swapping%20station_perspective_transparent.png">
-    <meta property="og:url" content="https://hyperionbattery.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hyperion</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-
-    
-<<body class="blog-page">
-<!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="logo">
-<!-- Display logo file in nav bar -->
-            <a href="/">
-              <img src="{{ 'Hyperionlogo blue background.png' | relative_url }}" alt="Hyperion's Logo">
-            </a>
-        </div>
-    </div>
-
-    <!-- Page Sections -->
-
-  
-    <section id="Blog" class="section">
-      <div class="text">    
-          <!--<h2>Blog</h2>-->
-          <br>
-        <div class="posts">
-          {% for post in site.posts limit:3 %}
-            <article class="post">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
-            {{ content }}
-            </article>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-  
-
-    <!--
-    <main>
-      <article>
-        <h1>{{ page.title }}</h1>
-        <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
-        {{ content }}
-      </article>
-    </main>
-
-    <!-- JS -->
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-  
-    <!-- Your footer here -->
-  </body>
-</html>
+<section class="section blog-section">
+  <div class="text">
+    <article class="post">
+      <h3>{{ page.title }}</h3>
+      <p class="date">{{ page.date | date: "%B %d, %Y" }}</p>
+      {{ content }}
+    </article>
+    <p class="back-link"><a href="{{ '/blog/' | relative_url }}">&larr; All posts</a></p>
+  </div>
+</section>
