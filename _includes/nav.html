@@ -1,1 +1,19 @@
-placeholder
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo">
+        <a href="{{ '/' | relative_url }}"><img src="{{ '/Hyperionlogo blue background.png' | relative_url }}" alt="Hyperion's Logo"></a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links">
+        <a href="{{ '/#HowItWorks' | relative_url }}" onclick="closeMenu()">How It Works</a>
+        <a href="{{ '/#Fleets' | relative_url }}" onclick="closeMenu()">Other Fleets</a>
+        <a href="{{ '/homeowners/' | relative_url }}" onclick="closeMenu()">For Homeowners</a>
+        <a href="{{ '/#Team' | relative_url }}" onclick="closeMenu()">Team</a>
+        <a href="{{ '/blog/' | relative_url }}" onclick="closeMenu()">Blog</a>
+        <a href="{{ '/#Assessment' | relative_url }}" class="nav-cta" onclick="closeMenu()">Free Assessment</a>
+    </div>
+</div>

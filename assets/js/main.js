@@ -1,128 +1,102 @@
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-        
-        function closeMenu() {
-            document.querySelector('.nav-links').classList.remove('active');
-        }
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('active');
+}
 
-        // Get the modal, the link, and the close button
+function closeMenu() {
+    document.querySelector('.nav-links').classList.remove('active');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Privacy policy modal
     const modal = document.getElementById("privacyModal");
-    const privacyLink = document.getElementById("privacyPolicyLink");
-    const closeBtn = document.querySelector(".close-btn");
-
-    // Show the modal when the privacy link is clicked
-    privacyLink.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent the default link action
-        modal.style.display = "flex"; // Show the modal as a flex container
-    });
-
-    // Close the modal when the close button is clicked
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none"; // Hide the modal
-    });
-
-    // Close the modal when clicking outside the modal content
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none"; // Hide the modal
+    if (modal) {
+        document.querySelectorAll(".privacy-link").forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                modal.style.display = "flex";
+            });
+        });
+        const closeBtn = modal.querySelector(".close-btn");
+        if (closeBtn) {
+            closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
         }
-    });
-
-        // JavaScript for autoplay video
-        document.addEventListener("DOMContentLoaded", function () {
-          const video = document.getElementById("scrollVideo");
-        
-          const observer = new IntersectionObserver(
-            function (entries) {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  video.play();
-                } else {
-                  video.pause();
-                }
-              });
-            },
-            {
-              threshold: 0.5,
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
             }
-          );
-        
-          if (video) {
-            observer.observe(video);
-          }
         });
+    }
 
+    // Play the animation only while it is on screen
+    const video = document.getElementById("scrollVideo");
+    if (video && "IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        video.play().catch(() => {});
+                    } else {
+                        video.pause();
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+        observer.observe(video);
+    }
 
-    // JavaScript for slideshow gallery
-    document.addEventListener("DOMContentLoaded", function () {
-        let index = 0;
-        const slides = document.querySelectorAll(".gallery-item");
-        const totalSlides = slides.length;
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
-        let interval = setInterval(nextSlide, 6000); // Auto-change every 5 seconds
+    // Slideshow gallery
+    const gallery = document.querySelector(".gallery");
+    const slides = document.querySelectorAll(".gallery-item");
+    if (!gallery || slides.length === 0) {
+        return;
+    }
 
-        function showSlide(index) {
-        slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        });
-        }
+    let index = 0;
+    let interval = null;
 
-        document.querySelector('.next').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        });
+    function showSlide(i) {
+        slides.forEach((slide, n) => slide.classList.toggle("active", n === i));
+    }
 
-        document.querySelector('.prev').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            showSlide(currentIndex);
-        });
-
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-        }, 6000);
-
-        function nextSlide() {
-            index = (index + 1) % totalSlides;
-            showSlide(index);
-        }
-
-        function prevSlide() {
-            index = (index - 1 + totalSlides) % totalSlides;
-            showSlide(index);
-        }
-
-        nextBtn.addEventListener("click", () => {
-            nextSlide();
-            resetTimer();
-        });
-
-        prevBtn.addEventListener("click", () => {
-            prevSlide();
-            resetTimer();
-        });
-
-        function resetTimer() {
-            clearInterval(interval);
-            interval = setInterval(nextSlide, 5000);
-        }
-
+    function nextSlide() {
+        index = (index + 1) % slides.length;
         showSlide(index);
+    }
 
-        // Touch swipe support for mobile
-        let startX = 0;
-        document.querySelector(".gallery").addEventListener("touchstart", (e) => {
-            startX = e.touches[0].clientX;
-        });
+    function prevSlide() {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    }
 
-        document.querySelector(".gallery").addEventListener("touchend", (e) => {
-            let endX = e.changedTouches[0].clientX;
-            if (startX > endX + 50) nextSlide();  // Swipe Left
-            if (startX < endX - 50) prevSlide();  // Swipe Right
-            resetTimer();
-        });
-        });
+    function resetTimer() {
+        clearInterval(interval);
+        interval = setInterval(nextSlide, 6000);
+    }
 
+    const nextBtn = gallery.querySelector(".next");
+    const prevBtn = gallery.querySelector(".prev");
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => { nextSlide(); resetTimer(); });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => { prevSlide(); resetTimer(); });
+    }
+
+    // Touch swipe support for mobile
+    let startX = 0;
+    gallery.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+    gallery.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX > endX + 50) nextSlide();
+        if (startX < endX - 50) prevSlide();
+        resetTimer();
+    });
+
+    showSlide(index);
+    resetTimer();
+});

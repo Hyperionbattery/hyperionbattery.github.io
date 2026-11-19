@@ -1,226 +1,167 @@
 ---
 layout: default
 title: Home
+description: Managed charging for golf course cart fleets. Add carts and chargers without waiting on an electrical service upgrade.
 ---
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="logo">
-            <a href="#Home"><img src="Hyperionlogo blue background.png" alt="Hyperion's Logo"></a> <!-- Display logo file in nav bar -->
-       
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="nav-links">
-            <a href="#Home" onclick="closeMenu()">Home</a>
-            <a href="#About" onclick="closeMenu()">About</a>
-            <a href="#Demo" onclick="closeMenu()">Demo</a>
-            <a href="#Gallery" onclick="closeMenu()">Gallery</a>
-            <a href="#Benefits" onclick="closeMenu()">Benefits</a>
-            <a href="#Team" onclick="closeMenu()">Team</a>
-            <a href="#Mailing List" onclick="closeMenu()">Mailing List</a>
-            <a href="#Blog" onclick="closemenu()">Blog</a>
-        </div>
-    </div>
-
-    <!-- Page Sections -->
-    <div id="Home" class="section">
+    <!-- Hero -->
+    <div id="Home" class="section hero">
         <div class="text">
-            <h1>Swappable batteries to power your home and equipment</h1>
+            <p class="eyebrow">Managed charging for golf course fleets</p>
+            <h1>Electrify your cart fleet without waiting on a service upgrade</h1>
             <br>
-            <br>
-            <p>Scroll to learn more or <a href="#Mailing List" class="cta-button">Join Our Mailing List</a></p>
-                
-        </div>
-        <div class="image"><img src="House with golf cart.jpg" alt="A house with solar panels, a battery energy storage system, and an electric golf cart in the garage"></div>
-    </div>
-    
-    <div id="About" class="section video-section">
-        <div class="text"> 
-            <h2>You can now power your home and equipment with the same battery packs.</h2>
-            <p><br></p>
-            <p>Hyperion is creating battery packs that can be used to backup your home or building and also power your electric equipment such as golf carts, lawn equipment, bikes, scooters, and much more. 
-            The packs will be swappable between all supported equipment and charge in a wall-mounted rack in your home or business.
-            It will be the most flexible and modular BESS available.</p>
-            <p><br></p>
-            <p>You can save money on your electricity bills, forget about grid outages, and achieve energy independence.
-            Battery swapping eliminates charging downtime and uses DC solar power more efficiently. 
-            You can also buy fewer batteries since you won't need to buy discrete batteries for your home and all your equipment.</p> 
-        </div>
-            
-        <!--<div class="model-container">
-                <model-viewer 
-                    src="BatteryModuleforwebsite2.gltf" 
-                    alt="3D battery model"
-                    auto-rotate 
-                    camera-controls 
-                    ar
-                    shadow-intensity="1">
-                </model-viewer>
-            </div> -->
-            <!--<div class="image"><img src="Battery Module.PNG" alt="Hyperion's universal battery pack"></div>-->
-        <div class="video-container">    
-            <video
-                id="scrollVideo"
-                muted
-                loop
-                playsinline
-                preload="auto"
-                >
-                <source src="{{ 'Hyperion Animation.mp4' | relative_url }}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-        </div>
-    </div>
-
-    <div id="Demo" class="section video-section">
-        <div class="text">
-            <h2>Watch Our Prototype Demo</h2>
-            <p>See our prototype in action in this quick demo video.</p>
-        </div>
-        <div class="iframe-container">
-            <iframe  
-                    src="https://www.youtube.com/embed/A2FkaSyfDF8" 
-                    title="Hyperion Introduction and Prototype Battery Swapping Demo" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    
-    <div id="Gallery" class="section">
-        <div class="text">
-            <h2>Prototype Gallery</h2>
-            <br>
-            <p>We have built a prototype from off-the-shelf bike batteries and other hardware to demonstrate the concept of swapping batteries from powering a shed, to an ebike, to a golf cart, and recharging with solar panels.
-                The prototype uses 4 battery packs which slide in and out of the rack horizontally.
-                <br>
-                <br>
-                Do not try this at home. It looks simple, but requires a custom energy management system to prevent the batteries from discharging into each other and causing rapid overheating.
-            </p>
-        </div>
-            <div class="gallery">
-                <div class="gallery-wrapper">
-                    <button class="prev">&#10094;</button>
-                    <div class="gallery-slides">
-                        <div class="gallery-item active">
-                            <img src="prototype_topview.JPG" class="gallery-slide" alt="Hyperion's battery swapping prototype including a view of the solar panels on the shed roof">
-                            <p class="gallery-caption">Hyperion's battery swapping prototype with a view of the solar panels on the shed roof</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="Battery_insertion.png" class="gallery-slide" alt="A battery pack being inserted into the Hyperion swapping rack">
-                            <p class="gallery-caption">A battery pack being inserted into the Hyperion swapping rack</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="bike insertion.png" class="gallery-slide active" alt="Hyperion's battery swapping into an ebike">
-                            <p class="gallery-caption">Hyperion's battery pack swapping into an ebike</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="batteries in golf cart.png" class="gallery-slide" alt="Prototype batteries mounted in a golf cart under the seat">
-                            <p class="gallery-caption">Prototype batteries mounted in a golf cart under the seat</p>
-                        </div>
-                    </div>
-                    <button class="next">&#10095;</button>
-                </div>  
+            <p>Hyperion schedules your whole fleet's charging to fit inside the electrical capacity you already have. Adding carts, switching to lithium, or putting in new chargers doesn't have to mean a new panel, a new transformer, and months of waiting on the utility.</p>
+            <div class="cta-row">
+                <a href="#Assessment" class="cta-button">Get a free fleet assessment</a>
+                <a href="#HowItWorks" class="cta-link">See how it works &rarr;</a>
             </div>
-    </div>    
-    
-    
-    <div id="Benefits" class="section">
+        </div>
+        <div class="image">
+            <img src="{{ '/batteries in golf cart.png' | relative_url }}" alt="Battery packs mounted in a golf cart under the seat">
+        </div>
+    </div>
+
+    <!-- Problem -->
+    <div id="Problem" class="section">
         <div class="text">
-            <h2>What is your lawnmower battery doing when you aren't mowing your lawn? </h2>
-            <p></p>
-            <h2>Nothing... put it to work.</h2>
+            <h2>When every cart plugs in at once, your electrical service feels it</h2>
             <br>
             <ul>
-                <li>Power your house, transportation, and tools with the same batteries</li>
-                <li>Gain independence from the grid and never worry about outages again</li>
-                <li>Save money on your electricity bill</li>
-                <li>Swap packs in seconds, don't wait for recharging</li>
-                <li>Use Hyperion batteries to power tools you already own from other brands</li>
-                <li>Buy your tools without their own batteries and save</li>
-                <li>Use your solar power more efficiently</li>
+                <li>At the end of the day, the whole fleet goes back to the barn and plugs in at the same time.</li>
+                <li>Every charger pulling at once creates one big peak, and your panel and service have to be sized for that peak.</li>
+                <li>Growing the fleet, converting gas carts, or upgrading to lithium chargers can push you past what your service can carry.</li>
+                <li>The usual fix is an electrical upgrade: new equipment, permits, and a long wait for the utility.</li>
             </ul>
+            <br>
+            <p>But carts sit parked for hours every night. They don't all need to charge at the same moment. They just need to be full by the first tee time.</p>
         </div>
-        <div class="image"><img src="Home swapping station_perspective_transparent.png" alt="Hyperion's home charging rack and swapping system"></div>
+        <div class="image chart">
+            <svg viewBox="0 0 520 340" role="img" aria-labelledby="chartTitle chartDesc">
+                <title id="chartTitle">Fleet charging load, unmanaged versus managed</title>
+                <desc id="chartDesc">Illustration. Unmanaged charging spikes above the service limit in the evening. Managed charging spreads the same energy overnight and stays under the limit.</desc>
+                <rect x="0" y="0" width="520" height="340" rx="14" class="chart-bg"/>
+                <!-- axes -->
+                <line x1="50" y1="280" x2="495" y2="280" class="chart-axis"/>
+                <line x1="50" y1="40" x2="50" y2="280" class="chart-axis"/>
+                <!-- service limit -->
+                <line x1="50" y1="140" x2="495" y2="140" class="chart-limit"/>
+                <text x="490" y="130" text-anchor="end" class="chart-label">Service limit</text>
+                <!-- unmanaged spike -->
+                <path d="M50,280 L90,280 L110,70 L170,72 L200,150 L240,230 L280,270 L320,280 L495,280" class="chart-unmanaged"/>
+                <text x="118" y="60" class="chart-label chart-label-unmanaged">Unmanaged</text>
+                <!-- managed plateau -->
+                <path d="M50,280 L90,280 L105,160 L420,160 L440,280 L495,280" class="chart-managed"/>
+                <text x="270" y="185" text-anchor="middle" class="chart-label chart-label-managed">Managed</text>
+                <!-- x labels -->
+                <text x="90" y="305" text-anchor="middle" class="chart-tick">Carts return</text>
+                <text x="440" y="305" text-anchor="middle" class="chart-tick">First tee time</text>
+                <text x="30" y="160" text-anchor="middle" transform="rotate(-90 30 160)" class="chart-tick">Charging load</text>
+            </svg>
+            <p class="chart-note">Illustration only, not measured data.</p>
+        </div>
     </div>
 
+    <!-- How it works -->
+    <div id="HowItWorks" class="section wide">
+        <div class="text">
+            <h2>How it works</h2>
+            <br>
+            <div class="steps">
+                <div class="step">
+                    <h3><span class="step-num">1</span> Measure</h3>
+                    <p>We meter your cart barn to see how much electrical capacity you're really using, and when.</p>
+                </div>
+                <div class="step">
+                    <h3><span class="step-num">2</span> Manage (V1G)</h3>
+                    <p>Hyperion paces and staggers charging across the fleet so the total load stays under a limit you set, and every cart is still full by morning.</p>
+                </div>
+                <div class="step">
+                    <h3><span class="step-num">3</span> Give back (V2G) <span class="badge">In development</span></h3>
+                    <p>Your carts are big batteries that sit parked most of the night. Bidirectional charging will let them support your clubhouse or barn when power is expensive or the grid goes down.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Assessment / pilot -->
+    <div id="Assessment" class="section">
+        <div class="text">
+            <h2>Get a free fleet charging assessment</h2>
+            <br>
+            <p>We're working with a small number of golf courses as early pilot partners. Tell us about your fleet and your cart barn, and we'll tell you whether managed charging can get you more carts or chargers on the service you already have.</p>
+            <br>
+            <p>No cost and no commitment.</p>
+        </div>
+        <div class="form-container">
+            <form action="https://formspree.io/f/xlddgwrd" method="POST" class="lead-form">
+                <input type="text" name="_honeypot" style="display:none">
+                <input type="hidden" name="_subject" value="Fleet assessment request">
+                <input type="hidden" name="interest" value="Fleet assessment">
+
+                <label>Name<input type="text" name="name" required></label>
+                <label>Email<input type="email" name="email" required></label>
+                <label>Course or company<input type="text" name="organization"></label>
+                <div class="form-row">
+                    <label>Number of carts or vehicles<input type="number" name="fleet_size" min="0"></label>
+                    <label>State<input type="text" name="state"></label>
+                </div>
+                <label>Anything we should know?
+                    <textarea name="message" rows="4" placeholder="Planned fleet changes, upgrade quotes, charging problems..."></textarea>
+                </label>
+                <button type="submit" class="submit-btn">Request my assessment</button>
+                <p class="form-note">We'll only use this to follow up with you. See our <a href="javascript:void(0);" class="privacy-link">Privacy Policy</a>.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Other fleets -->
+    <div id="Fleets" class="section wide">
+        <div class="text">
+            <h2>Running forklifts or another electric fleet?</h2>
+            <br>
+            <p>The same problem shows up anywhere a fleet charges on a fixed schedule: warehouse forklifts, utility vehicles, and resort or campus carts. If you're electrifying a fleet and your electrical service is the bottleneck, we'd like to hear from you.</p>
+            <br>
+            <a href="#Assessment" class="cta-button">Tell us about your fleet</a>
+        </div>
+    </div>
+
+    <!-- Team -->
     <div id="Team" class="section">
         <div class="text">
             <h2>Meet the Founder</h2>
             <p><br>
-            CEO Matt’s career aspiration is to make as much impact on the climate crisis and energy transition as possible. He has an MS and PhD in sustainable engineering, with a concentration in energy systems. 
-            He is confident battery storage will unlock the true potentail of renewable energy.</p></div>
-            <!--<p><br>
-            CTO Cel is a homeowner with 2 EVs and a full workshop of electric carpentry and lawncare tools. He has been waiting for this solution, but he's done waiting, it's time to build it.
-            He holds an MS in electrical engineering and has battery expertise from his previous job performing battery failure analysis.</p></div>-->
-        <div class="image"><img src="Matt Headshot.jpg" alt="Image of the Hyperion cofounder, Matt Ashcroft">
+            CEO Matt’s career aspiration is to make as much impact on the climate crisis and energy transition as possible. He has an MS and PhD in sustainable engineering, with a concentration in energy systems.
+            He is confident battery storage will unlock the true potential of renewable energy.</p>
+        </div>
+        <div class="image"><img src="{{ '/Matt Headshot.jpg' | relative_url }}" alt="Image of the Hyperion cofounder, Matt Ashcroft">
             <p>Matt Ashcroft, CEO</p>
         </div>
     </div>
 
-    <div id="Mailing List" class="section">
+    <!-- Homeowners teaser -->
+    <div id="Homeowners" class="section wide">
         <div class="text">
-            <h2>Mailing List</h2>
+            <h2>Own a golf cart at home?</h2>
             <br>
-            <p>Interested in our vision for the future of energy storage? Join our mailing list to stay up to date on Hyperion's development.</p>
+            <p>We're also exploring how the battery in a personal golf cart could back up your home during an outage.</p>
+            <br>
+            <a href="{{ '/homeowners/' | relative_url }}" class="cta-button">Learn more for homeowners</a>
         </div>
-        <!--<div class="image"><img src="image5.jpg" alt="Image 5"></div>-->
-
-        <div class="email-input-container">
-            <!-- <input type="email" class="email-input" placeholder="Enter your email" required>
-            <button class="submit-btn">Subscribe</button>
-            -->
-            <form action="https://formspree.io/f/xlddgwrd" method="POST">
-                <!-- Honeypot for spam prevention -->
-                <input type="text" name="_honeypot" style="display:none">
-        
-                <!-- Email input -->
-                <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
-        
-                <!-- Submit button -->
-                <button type="submit" class="submit-btn">Subscribe</button>
-                <footer>
-                        By subscribing, you agree to our
-                        <a href="javascript:void(0);" id="privacyPolicyLink" style="color: #f7c600; text-decoration: underline;">Privacy Policy</a>.
-                </footer>
-            </form>
-       </div>
     </div>
 
+    <!-- Blog -->
     <section id="Blog" class="section">
-      <div class="text">    
-          <h2>Blog</h2>
+      <div class="text">
+          <h2>From the Blog</h2>
         <div class="posts">
           {% for post in site.posts limit:3 %}
             <article class="post">
-              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
               <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
-              <p>{{ post.excerpt }}</p>
-              <a class="read-more" href="{{ post.url }}">Read more →</a>
+              <p>{{ post.excerpt | strip_html | truncatewords: 60 }}</p>
+              <a class="read-more" href="{{ post.url | relative_url }}">Read more &rarr;</a>
             </article>
           {% endfor %}
         </div>
       </div>
     </section>
-
-</div>
-
-<!-- Modal Structure -->
-<div id="privacyModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Privacy Policy</h2>
-        <p>Your privacy is important to us. We will only use your email to send you news about Hyperion and will not share your email with third parties.</p>
-    </div>
-</div>
-   
-
-
-
