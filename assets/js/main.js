@@ -123,3 +123,54 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     targets.forEach((el) => observer.observe(el));
 });
+
+// Lead forms: submit in the background, show a thank-you, and record a GA event
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("form[data-lead-form]").forEach((form) => {
+        form.addEventListener("submit", async (event) => {
+            if (!window.fetch || !window.FormData) return; // fall back to a normal post
+            event.preventDefault();
+            const button = form.querySelector("button[type=submit]");
+            const label = button ? button.textContent : "";
+            if (button) { button.disabled = true; button.textContent = "Sending..."; }
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { Accept: "application/json" },
+                });
+                if (!response.ok) throw new Error("Form error " + response.status);
+                if (typeof gtag === "function") {
+                    gtag("event", "generate_lead", { form_name: form.dataset.leadForm });
+                }
+                const thanks = document.createElement("div");
+                thanks.className = "form-thanks";
+                thanks.setAttribute("role", "status");
+                thanks.innerHTML = form.dataset.leadForm === "homeowner"
+                    ? "<h3>You're on the list.</h3><p>We'll email you when we're ready for early testers.</p>"
+                    : "<h3>Thanks, we got it.</h3><p>Matt will email you within two business days to set up a short call and your free bill review.</p>";
+                form.replaceWith(thanks);
+            } catch (err) {
+                if (button) { button.disabled = false; button.textContent = label; }
+                let note = form.querySelector(".form-error");
+                if (!note) {
+                    note = document.createElement("p");
+                    note.className = "form-error";
+                    form.appendChild(note);
+                }
+                note.textContent = "Sorry, that didn't go through. Please try again in a moment.";
+            }
+        });
+    });
+
+    // Sticky mobile button: hide it while a form is on screen
+    const sticky = document.querySelector(".sticky-cta");
+    if (sticky && "IntersectionObserver" in window) {
+        const visible = new Set();
+        const watch = new IntersectionObserver((entries) => {
+            entries.forEach((e) => (e.isIntersecting ? visible.add(e.target) : visible.delete(e.target)));
+            sticky.classList.toggle("hidden", visible.size > 0);
+        });
+        document.querySelectorAll("form[data-lead-form], #Assessment").forEach((el) => watch.observe(el));
+    }
+});

@@ -11,10 +11,23 @@ description: Managed charging for golf course cart fleets. Add carts and charger
             <h1>Electrify your cart fleet without waiting on a service upgrade</h1>
             <br>
             <p>Hyperion schedules your whole fleet's charging to fit inside the electrical capacity you already have. Adding carts, switching to lithium, or putting in new chargers doesn't have to mean a new panel, a new transformer, and months of waiting on the utility.</p>
-            <div class="cta-row">
-                <a href="#Assessment" class="cta-button">Get a free fleet assessment</a>
-                <a href="#HowItWorks" class="cta-link">See how it works &rarr;</a>
-            </div>
+            <form action="https://formspree.io/f/xlddgwrd" method="POST" class="lead-form quick-form" data-lead-form="hero">
+                <p class="quick-form-title">Find out how many more carts your service can handle. Free.</p>
+                <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                <input type="hidden" name="_subject" value="Fleet assessment request (quick form)">
+                <input type="hidden" name="interest" value="Fleet assessment - hero form">
+                <div class="quick-fields">
+                    <label class="sr-only" for="heroEmail">Email</label>
+                    <input id="heroEmail" type="email" name="email" placeholder="Work email" required>
+                    <label class="sr-only" for="heroCourse">Course name</label>
+                    <input id="heroCourse" type="text" name="organization" placeholder="Course name">
+                    <label class="sr-only" for="heroCarts">Number of carts</label>
+                    <input id="heroCarts" type="number" name="fleet_size" min="0" placeholder="# of carts">
+                    <button type="submit" class="submit-btn">Get my free assessment</button>
+                </div>
+                <p class="form-note">Free bill review and two weeks of free metering. No changes to your carts or chargers.</p>
+            </form>
+            <a href="#HowItWorks" class="cta-link">See how it works &rarr;</a>
         </div>
         <div class="image hero-image">
             {% include hero-fleet.svg %}
@@ -32,6 +45,8 @@ description: Managed charging for golf course cart fleets. Add carts and charger
                 <li>Growing the fleet, converting gas carts, or upgrading to lithium chargers can push you past what your service can carry.</li>
                 <li>The usual fix is an electrical upgrade: new equipment, permits, and a long wait for the utility.</li>
             </ul>
+            <br>
+            <p>And if cart charging sets your monthly demand peak, you pay for it on every electric bill too.</p>
             <br>
             <p>But carts sit parked for hours every night. They don't all need to charge at the same moment. They just need to be full by the first tee time.</p>
         </div>
@@ -84,33 +99,96 @@ description: Managed charging for golf course cart fleets. Add carts and charger
     </div>
 
     <!-- Assessment / pilot -->
-    <div id="Assessment" class="section reveal-section">
+    <div id="Assessment" class="section">
         <div class="text">
-            <h2>Get a free fleet charging assessment</h2>
+            <p class="eyebrow">Free for pilot courses</p>
+            <h2>Find out how much room your electrical service really has</h2>
             <br>
-            <p>We're working with a small number of golf courses as early pilot partners. Tell us about your fleet and your cart barn, and we'll tell you whether managed charging can get you more carts or chargers on the service you already have.</p>
+            <ol class="offer-steps">
+                <li><strong>Free bill review.</strong> Send us 12 months of electric bills. We'll tell you whether cart charging is setting your peak and how much headroom your service has.</li>
+                <li><strong>Two weeks of free metering.</strong> If the numbers look promising, we install a small meter on your cart barn panel for about two weeks, at no cost to you. Nothing changes on your carts or chargers.</li>
+                <li><strong>Your report.</strong> You get your real charging peak and how many more carts or chargers could fit on your current service with managed charging.</li>
+            </ol>
             <br>
-            <p>No cost and no commitment.</p>
+            <p>We're taking on a small number of pilot courses. Pilot partners get first access to Hyperion and help shape the product.</p>
         </div>
         <div class="form-container">
-            <form action="https://formspree.io/f/xlddgwrd" method="POST" class="lead-form">
-                <input type="text" name="_honeypot" style="display:none">
+            <form action="https://formspree.io/f/xlddgwrd" method="POST" class="lead-form" data-lead-form="full">
+                <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
                 <input type="hidden" name="_subject" value="Fleet assessment request">
-                <input type="hidden" name="interest" value="Fleet assessment">
+                <input type="hidden" name="interest" value="Fleet assessment - full form">
 
                 <label>Name<input type="text" name="name" required></label>
                 <label>Email<input type="email" name="email" required></label>
+                <label>Phone (optional)<input type="tel" name="phone"></label>
                 <label>Course or company<input type="text" name="organization"></label>
                 <div class="form-row">
                     <label>Number of carts or vehicles<input type="number" name="fleet_size" min="0"></label>
                     <label>State<input type="text" name="state"></label>
                 </div>
-                <label>Anything we should know?
-                    <textarea name="message" rows="4" placeholder="Planned fleet changes, upgrade quotes, charging problems..."></textarea>
+                <fieldset class="checks">
+                    <legend>Any of these sound familiar?</legend>
+                    <label><input type="checkbox" name="adding_carts" value="Yes"> We're adding carts or chargers</label>
+                    <label><input type="checkbox" name="switching_lithium" value="Yes"> We're switching to lithium</label>
+                    <label><input type="checkbox" name="converting_gas" value="Yes"> We're converting gas carts to electric</label>
+                    <label><input type="checkbox" name="upgrade_quote" value="Yes"> We got a quote for an electrical upgrade</label>
+                    <label><input type="checkbox" name="breakers_or_outlets" value="Yes"> Chargers trip breakers or we're out of outlets</label>
+                    <label><input type="checkbox" name="high_demand_charges" value="Yes"> Our demand charges are high</label>
+                </fieldset>
+                <label>Anything else we should know?
+                    <textarea name="message" rows="3" placeholder="Planned fleet changes, upgrade quotes, charging problems..."></textarea>
                 </label>
-                <button type="submit" class="submit-btn">Request my assessment</button>
+                <button type="submit" class="submit-btn">Request my free assessment</button>
                 <p class="form-note">We'll only use this to follow up with you. See our <a href="javascript:void(0);" class="privacy-link">Privacy Policy</a>.</p>
             </form>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div id="FAQ" class="section wide">
+        <div class="text">
+            <h2>Common questions</h2>
+            <br>
+            <div class="faq">
+                <details>
+                    <summary>Does the assessment change anything on my carts or chargers?</summary>
+                    <p>No. The bill review is just paperwork, and the meter only measures how much power your cart barn uses and when. Your carts and chargers keep working exactly as they do today.</p>
+                </details>
+                <details>
+                    <summary>What does it cost?</summary>
+                    <p>The bill review, the metering, and the report are free. If managed charging looks like a fit for your course, we'll talk through pilot terms with you before anything else happens.</p>
+                </details>
+                <details>
+                    <summary>What do you need from us?</summary>
+                    <p>A short call, 12 months of electric bills, and access to your cart barn panel for the meter install. We schedule the install around your operations.</p>
+                </details>
+                <details>
+                    <summary>Is managed charging allowed by electrical code?</summary>
+                    <p>The National Electrical Code includes provisions for energy management systems that cap total load. Approval is up to your local inspector, and we work through that with you before anything is installed.</p>
+                </details>
+                <details>
+                    <summary>Will it work with our carts?</summary>
+                    <p>The metering works with any fleet. Whether managed charging works with your chargers is one of the things the assessment checks.</p>
+                </details>
+                <details>
+                    <summary>Who is Hyperion?</summary>
+                    <p>Hyperion is an early-stage company founded by Matt Ashcroft, who holds a PhD in sustainable engineering focused on energy systems. We're working closely with a small number of pilot courses to build managed and bidirectional charging for cart fleets.</p>
+                </details>
+            </div>
+            <br>
+            <a href="#Assessment" class="cta-button">Request my free assessment</a>
+        </div>
+    </div>
+
+    <!-- Team -->
+    <div id="Team" class="section reveal-section">
+        <div class="text">
+            <h2>Meet the Founder</h2>
+            <p><br>
+            Matt Ashcroft has an MS and PhD in sustainable engineering, with a concentration in energy systems. He started Hyperion to make as much impact on the energy transition as possible, beginning with the batteries golf courses already own.</p>
+        </div>
+        <div class="image"><img src="{{ '/Matt Headshot.jpg' | relative_url }}" alt="Matt Ashcroft, founder and CEO of Hyperion">
+            <p>Matt Ashcroft, CEO</p>
         </div>
     </div>
 
@@ -122,19 +200,6 @@ description: Managed charging for golf course cart fleets. Add carts and charger
             <p>The same problem shows up anywhere a fleet charges on a fixed schedule: warehouse forklifts, utility vehicles, and resort or campus carts. If you're electrifying a fleet and your electrical service is the bottleneck, we'd like to hear from you.</p>
             <br>
             <a href="#Assessment" class="cta-button">Tell us about your fleet</a>
-        </div>
-    </div>
-
-    <!-- Team -->
-    <div id="Team" class="section reveal-section">
-        <div class="text">
-            <h2>Meet the Founder</h2>
-            <p><br>
-            CEO Matt’s career aspiration is to make as much impact on the climate crisis and energy transition as possible. He has an MS and PhD in sustainable engineering, with a concentration in energy systems.
-            He is confident battery storage will unlock the true potential of renewable energy.</p>
-        </div>
-        <div class="image"><img src="{{ '/Matt Headshot.jpg' | relative_url }}" alt="Image of the Hyperion cofounder, Matt Ashcroft">
-            <p>Matt Ashcroft, CEO</p>
         </div>
     </div>
 
@@ -165,3 +230,5 @@ description: Managed charging for golf course cart fleets. Add carts and charger
         </div>
       </div>
     </section>
+
+    <a href="#Assessment" class="sticky-cta">Get my free assessment</a>
