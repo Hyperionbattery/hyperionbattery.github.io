@@ -737,6 +737,77 @@
             color: #f7c600;
         }
 
+        /* Hero illustration */
+        .hero-art {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 18px;
+            box-shadow: 0 12px 28px rgba(0, 63, 93, 0.25);
+        }
+
+        .hero-bar { transform-box: fill-box; transform-origin: bottom; }
+        .hero-bar-a { animation: heroCharge 5s ease-in-out infinite; }
+        .hero-bar-b { animation: heroCharge 5s ease-in-out infinite 1.6s; }
+        .hero-bar-c { animation: heroCharge 5s ease-in-out infinite 3.2s; }
+        .hero-signal { animation: heroSignal 1.5s linear infinite; }
+        .hero-load { animation: heroLoad 5s ease-in-out infinite; }
+
+        @keyframes heroCharge {
+            0% { transform: scaleY(0.2); }
+            60%, 100% { transform: scaleY(1); }
+        }
+        @keyframes heroSignal { to { stroke-dashoffset: -18; } }
+        @keyframes heroLoad {
+            0%, 100% { width: 24px; }
+            50% { width: 28px; }
+        }
+
+        /* Scroll reveals (only when JS has opted in) */
+        .js-reveal .reveal,
+        .js-reveal .reveal-section .text {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .js-reveal .reveal.in-view,
+        .js-reveal .reveal-section .text.in-view {
+            opacity: 1;
+            transform: none;
+        }
+        .js-reveal .step.reveal:nth-child(2) { transition-delay: 0.15s; }
+        .js-reveal .step.reveal:nth-child(3) { transition-delay: 0.3s; }
+
+        /* Chart draws unmanaged first, then the managed curve */
+        .js-reveal .reveal-chart .chart-unmanaged,
+        .js-reveal .reveal-chart .chart-managed {
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            fill-opacity: 0;
+            transition: stroke-dashoffset 1.4s ease, fill-opacity 0.6s ease;
+        }
+        .js-reveal .reveal-chart .chart-managed { transition-delay: 1.4s, 2.4s; }
+        .js-reveal .reveal-chart .chart-unmanaged { transition-delay: 0s, 1s; }
+        .js-reveal .reveal-chart.in-view .chart-unmanaged,
+        .js-reveal .reveal-chart.in-view .chart-managed {
+            stroke-dashoffset: 0;
+            fill-opacity: 1;
+        }
+        .js-reveal .reveal-chart .chart-fade-1,
+        .js-reveal .reveal-chart .chart-fade-2 {
+            opacity: 0;
+            transition: opacity 0.6s ease 1s;
+        }
+        .js-reveal .reveal-chart .chart-fade-2 { transition-delay: 2.6s; }
+        .js-reveal .reveal-chart.in-view .chart-fade-1,
+        .js-reveal .reveal-chart.in-view .chart-fade-2 { opacity: 1; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bar, .hero-signal, .hero-load { animation: none; }
+        }
+
         /* Mobile Responsive Layout */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; } /* Scales down for mobile */

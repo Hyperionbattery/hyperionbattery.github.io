@@ -100,3 +100,26 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(index);
     resetTimer();
 });
+
+// Scroll-triggered reveals: sections fade up, the charging chart draws itself
+document.addEventListener("DOMContentLoaded", function () {
+    const targets = document.querySelectorAll(".reveal, .reveal-section .text, .reveal-chart");
+    if (!("IntersectionObserver" in window) ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        targets.forEach((el) => el.classList.add("in-view"));
+        return;
+    }
+    document.documentElement.classList.add("js-reveal");
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.25 }
+    );
+    targets.forEach((el) => observer.observe(el));
+});

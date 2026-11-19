@@ -1,0 +1,93 @@
+<svg class="hero-art" viewBox="0 0 640 480" role="img" aria-labelledby="heroArtTitle heroArtDesc" xmlns="http://www.w3.org/2000/svg">
+    <title id="heroArtTitle">Golf carts charging in a cart barn at dusk</title>
+    <desc id="heroArtDesc">Illustration of a row of golf carts plugged into chargers inside a cart barn, with a Hyperion controller pacing their charging so the barn's total load stays under its limit.</desc>
+    <defs>
+        <linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#003F5D"/>
+            <stop offset="0.65" stop-color="#005F8D"/>
+            <stop offset="1" stop-color="#3f8fb8"/>
+        </linearGradient>
+        <linearGradient id="heroHill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f7d4f"/>
+            <stop offset="1" stop-color="#1f5b39"/>
+        </linearGradient>
+        <g id="heroCart">
+            <!-- canopy -->
+            <rect x="6" y="0" width="86" height="8" rx="3" fill="#f4f8fb"/>
+            <rect x="14" y="8" width="4" height="46" fill="#c9d6de"/>
+            <rect x="80" y="8" width="4" height="40" fill="#c9d6de"/>
+            <!-- seat -->
+            <rect x="34" y="38" width="30" height="8" rx="3" fill="#1d2b33"/>
+            <rect x="58" y="22" width="8" height="24" rx="3" fill="#1d2b33"/>
+            <!-- body -->
+            <path d="M4,52 Q4,46 12,46 L90,46 Q98,46 98,54 L98,66 L4,66 Z" fill="#ffffff"/>
+            <path d="M4,52 Q2,40 12,36 L20,36 L20,46 L12,46 Q4,46 4,52 Z" fill="#e6eef3"/>
+            <!-- wheels -->
+            <circle cx="24" cy="68" r="10" fill="#1d2b33"/>
+            <circle cx="24" cy="68" r="4" fill="#7a8a94"/>
+            <circle cx="80" cy="68" r="10" fill="#1d2b33"/>
+            <circle cx="80" cy="68" r="4" fill="#7a8a94"/>
+        </g>
+    </defs>
+
+    <!-- sky and course -->
+    <rect width="640" height="480" rx="18" fill="url(#heroSky)"/>
+    <g fill="#ffffff" opacity="0.7">
+        <circle cx="70" cy="50" r="1.6"/><circle cx="150" cy="90" r="1.2"/><circle cx="240" cy="40" r="1.4"/>
+        <circle cx="470" cy="60" r="1.2"/><circle cx="560" cy="35" r="1.6"/><circle cx="600" cy="100" r="1.1"/>
+    </g>
+    <circle cx="540" cy="80" r="22" fill="#f7c600" opacity="0.9"/>
+    <path d="M0,200 Q160,150 330,185 T640,170 L640,480 L0,480 Z" fill="url(#heroHill)"/>
+    <!-- flag on the green -->
+    <ellipse cx="520" cy="182" rx="34" ry="6" fill="#3f9d64"/>
+    <line x1="520" y1="182" x2="520" y2="140" stroke="#ffffff" stroke-width="2"/>
+    <path d="M520,140 L542,147 L520,154 Z" fill="#f7c600"/>
+
+    <!-- cart barn -->
+    <path d="M40,230 L320,160 L600,230 L600,440 L40,440 Z" fill="#d9f1ff"/>
+    <path d="M24,236 L320,154 L616,236" fill="none" stroke="#003F5D" stroke-width="12" stroke-linejoin="round"/>
+    <rect x="70" y="250" width="500" height="190" fill="#0b3a52"/>
+
+    <!-- Hyperion controller -->
+    <rect x="288" y="196" width="64" height="40" rx="6" fill="#003F5D"/>
+    <text x="320" y="214" text-anchor="middle" font-family="Roboto, sans-serif" font-size="11" font-weight="700" fill="#f7c600">HYPERION</text>
+    <rect x="300" y="222" width="40" height="6" rx="3" fill="#1d4f6a"/>
+    <rect class="hero-load" x="300" y="222" width="26" height="6" rx="3" fill="#4cd38a"/>
+
+    <!-- control lines to chargers -->
+    <g fill="none" stroke="#f7c600" stroke-width="2" stroke-dasharray="4 5" class="hero-signal">
+        <path d="M320,236 L320,256 L120,256 L120,286"/>
+        <path d="M320,256 L220,256 L220,286"/>
+        <path d="M320,256 L320,286"/>
+        <path d="M320,256 L420,256 L420,286"/>
+        <path d="M320,256 L520,256 L520,286"/>
+    </g>
+
+    <!-- chargers with charge levels -->
+    <g class="hero-chargers">
+        <g transform="translate(108,286)"><rect width="24" height="40" rx="4" fill="#d9f1ff"/><rect x="6" y="8" width="12" height="24" rx="2" fill="#1d4f6a"/><rect class="hero-bar hero-bar-full" x="6" y="8" width="12" height="24" rx="2" fill="#4cd38a"/></g>
+        <g transform="translate(208,286)"><rect width="24" height="40" rx="4" fill="#d9f1ff"/><rect x="6" y="8" width="12" height="24" rx="2" fill="#1d4f6a"/><rect class="hero-bar hero-bar-a" x="6" y="8" width="12" height="24" rx="2" fill="#4cd38a"/></g>
+        <g transform="translate(308,286)"><rect width="24" height="40" rx="4" fill="#d9f1ff"/><rect x="6" y="8" width="12" height="24" rx="2" fill="#1d4f6a"/><rect class="hero-bar hero-bar-b" x="6" y="8" width="12" height="24" rx="2" fill="#f7c600"/></g>
+        <g transform="translate(408,286)"><rect width="24" height="40" rx="4" fill="#d9f1ff"/><rect x="6" y="8" width="12" height="24" rx="2" fill="#1d4f6a"/><rect class="hero-bar hero-bar-c" x="6" y="8" width="12" height="24" rx="2" fill="#f7c600"/></g>
+        <g transform="translate(508,286)"><rect width="24" height="40" rx="4" fill="#d9f1ff"/><rect x="6" y="8" width="12" height="24" rx="2" fill="#1d4f6a"/><rect class="hero-bar hero-bar-full" x="6" y="8" width="12" height="24" rx="2" fill="#4cd38a"/></g>
+    </g>
+
+    <!-- carts (front row) -->
+    <use href="#heroCart" transform="translate(76,344) scale(0.88)"/>
+    <use href="#heroCart" transform="translate(176,344) scale(0.88)"/>
+    <use href="#heroCart" transform="translate(276,344) scale(0.88)"/>
+    <use href="#heroCart" transform="translate(376,344) scale(0.88)"/>
+    <use href="#heroCart" transform="translate(476,344) scale(0.88)"/>
+
+    <!-- cables -->
+    <g fill="none" stroke="#1d2b33" stroke-width="3" stroke-linecap="round">
+        <path d="M120,326 Q118,356 150,392"/>
+        <path d="M220,326 Q218,356 250,392"/>
+        <path d="M320,326 Q318,356 350,392"/>
+        <path d="M420,326 Q418,356 450,392"/>
+        <path d="M520,326 Q518,356 550,392"/>
+    </g>
+
+    <!-- floor -->
+    <rect x="40" y="418" width="560" height="22" fill="#d9f1ff"/>
+</svg>

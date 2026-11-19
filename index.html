@@ -16,13 +16,13 @@ description: Managed charging for golf course cart fleets. Add carts and charger
                 <a href="#HowItWorks" class="cta-link">See how it works &rarr;</a>
             </div>
         </div>
-        <div class="image">
-            <img src="{{ '/batteries in golf cart.png' | relative_url }}" alt="Battery packs mounted in a golf cart under the seat">
+        <div class="image hero-image">
+            {% include hero-fleet.svg %}
         </div>
     </div>
 
     <!-- Problem -->
-    <div id="Problem" class="section">
+    <div id="Problem" class="section reveal-section">
         <div class="text">
             <h2>When every cart plugs in at once, your electrical service feels it</h2>
             <br>
@@ -35,7 +35,7 @@ description: Managed charging for golf course cart fleets. Add carts and charger
             <br>
             <p>But carts sit parked for hours every night. They don't all need to charge at the same moment. They just need to be full by the first tee time.</p>
         </div>
-        <div class="image chart">
+        <div class="image chart reveal-chart">
             <svg viewBox="0 0 520 340" role="img" aria-labelledby="chartTitle chartDesc">
                 <title id="chartTitle">Fleet charging load, unmanaged versus managed</title>
                 <desc id="chartDesc">Illustration. Unmanaged charging spikes above the service limit in the evening. Managed charging spreads the same energy overnight and stays under the limit.</desc>
@@ -47,11 +47,11 @@ description: Managed charging for golf course cart fleets. Add carts and charger
                 <line x1="50" y1="140" x2="495" y2="140" class="chart-limit"/>
                 <text x="490" y="130" text-anchor="end" class="chart-label">Service limit</text>
                 <!-- unmanaged spike -->
-                <path d="M50,280 L90,280 L110,70 L170,72 L200,150 L240,230 L280,270 L320,280 L495,280" class="chart-unmanaged"/>
-                <text x="118" y="60" class="chart-label chart-label-unmanaged">Unmanaged</text>
+                <path d="M50,280 L90,280 L110,70 L170,72 L200,150 L240,230 L280,270 L320,280 L495,280" class="chart-unmanaged" pathLength="1"/>
+                <text x="118" y="60" class="chart-label chart-label-unmanaged chart-fade-1">Unmanaged</text>
                 <!-- managed plateau -->
-                <path d="M50,280 L90,280 L105,160 L420,160 L440,280 L495,280" class="chart-managed"/>
-                <text x="270" y="185" text-anchor="middle" class="chart-label chart-label-managed">Managed</text>
+                <path d="M50,280 L90,280 L105,160 L420,160 L440,280 L495,280" class="chart-managed" pathLength="1"/>
+                <text x="270" y="185" text-anchor="middle" class="chart-label chart-label-managed chart-fade-2">Managed</text>
                 <!-- x labels -->
                 <text x="90" y="305" text-anchor="middle" class="chart-tick">Carts return</text>
                 <text x="440" y="305" text-anchor="middle" class="chart-tick">First tee time</text>
@@ -67,15 +67,15 @@ description: Managed charging for golf course cart fleets. Add carts and charger
             <h2>How it works</h2>
             <br>
             <div class="steps">
-                <div class="step">
+                <div class="step reveal">
                     <h3><span class="step-num">1</span> Measure</h3>
                     <p>We meter your cart barn to see how much electrical capacity you're really using, and when.</p>
                 </div>
-                <div class="step">
+                <div class="step reveal">
                     <h3><span class="step-num">2</span> Manage (V1G)</h3>
                     <p>Hyperion paces and staggers charging across the fleet so the total load stays under a limit you set, and every cart is still full by morning.</p>
                 </div>
-                <div class="step">
+                <div class="step reveal">
                     <h3><span class="step-num">3</span> Give back (V2G) <span class="badge">In development</span></h3>
                     <p>Your carts are big batteries that sit parked most of the night. Bidirectional charging will let them support your clubhouse or barn when power is expensive or the grid goes down.</p>
                 </div>
@@ -84,7 +84,7 @@ description: Managed charging for golf course cart fleets. Add carts and charger
     </div>
 
     <!-- Assessment / pilot -->
-    <div id="Assessment" class="section">
+    <div id="Assessment" class="section reveal-section">
         <div class="text">
             <h2>Get a free fleet charging assessment</h2>
             <br>
@@ -115,7 +115,7 @@ description: Managed charging for golf course cart fleets. Add carts and charger
     </div>
 
     <!-- Other fleets -->
-    <div id="Fleets" class="section wide">
+    <div id="Fleets" class="section reveal-section wide">
         <div class="text">
             <h2>Running forklifts or another electric fleet?</h2>
             <br>
@@ -126,7 +126,7 @@ description: Managed charging for golf course cart fleets. Add carts and charger
     </div>
 
     <!-- Team -->
-    <div id="Team" class="section">
+    <div id="Team" class="section reveal-section">
         <div class="text">
             <h2>Meet the Founder</h2>
             <p><br>
@@ -139,7 +139,7 @@ description: Managed charging for golf course cart fleets. Add carts and charger
     </div>
 
     <!-- Homeowners teaser -->
-    <div id="Homeowners" class="section wide">
+    <div id="Homeowners" class="section reveal-section wide">
         <div class="text">
             <h2>Own a golf cart at home?</h2>
             <br>
