@@ -39,9 +39,10 @@
     <circle cx="540" cy="80" r="22" fill="#f7c600" opacity="0.9"/>
     <path d="M0,200 Q160,150 330,185 T640,170 L640,480 L0,480 Z" fill="url(#heroHill)"/>
     <!-- flag on the green -->
-    <ellipse cx="520" cy="182" rx="34" ry="6" fill="#3f9d64"/>
-    <line x1="520" y1="182" x2="520" y2="140" stroke="#ffffff" stroke-width="2"/>
-    <path d="M520,140 L542,147 L520,154 Z" fill="#f7c600"/>
+    <ellipse cx="575" cy="195" rx="30" ry="5" fill="#3f9d64"/>
+    <ellipse cx="575" cy="195" rx="2.5" ry="1.2" fill="#1d2b33"/>
+    <line x1="575" y1="195" x2="575" y2="152" stroke="#ffffff" stroke-width="2"/>
+    <path d="M575,152 L597,159 L575,166 Z" fill="#f7c600"/>
 
     <!-- cart barn -->
     <path d="M40,230 L320,160 L600,230 L600,440 L40,440 Z" fill="#d9f1ff"/>
